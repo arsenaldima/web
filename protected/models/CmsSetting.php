@@ -31,7 +31,7 @@ class CmsSetting extends CActiveRecord
 			array('ct_page, ct_com', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, ct_page, ct_com', 'safe', 'on'=>'search'),
+			array('id, ct_page, ct_com, time', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -53,9 +53,9 @@ class CmsSetting extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'ct_page' => 'Ct Page',
-			'ct_com' => 'Ct Com',
-            'time'=>'time',
+			'ct_page' => 'Количество страниц для статей',
+			'ct_com' => 'Количество страниц для комментариев',
+            'time'=>'Время жизни ссылки',
 		);
 	}
 
