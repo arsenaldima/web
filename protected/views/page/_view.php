@@ -4,7 +4,7 @@
 
 <style type="text/css">
 
-    .link:hover
+    .li_n:hover
     {
         cursor:pointer;
         color: green;
@@ -17,9 +17,21 @@
         bottom: 70%;
     }
 
+    ol>li{
+        display:block;
+    }
+    ol{
+        counter-reset:item;
+    },
+    ol>li:before{
+
+        counter-increment:item;
+        content:counters(item,".") ". ";
+    }
+
 </style>
 
-<ul class="comments-list">
+<ol  class="comments-list" type="1">
     <?php foreach($comments as $comment):?>
         <li id="<?php echo $comment->id; ?>">
 
@@ -38,12 +50,12 @@
                 <?php echo CHtml::encode($comment->content);?>
             </div>
 
-
+            <?php if($comment->user_id==Yii::app()->user->id) echo CHtml::link('Удалить',array('/page/delete','id'=>$comment->id))?>
             <?php if(count($comment->childs) > 0 ) $this->renderPartial('_view', array('comments' => $comment->childs));  ?>
-            <?php if(count($comment->childs) <= 0 ): ?> <a id="<?php echo $comment->id; ?>" class="link">Ответить</a>  <?php endif?>
+            <?php if(count($comment->childs) <= 0 ): ?> <a id="<?php echo $comment->id; ?>" class="li_n">Ответить</a>  <?php endif?>
 
         </li>
     <?php endforeach;?>
-</ul>
+</ol>
 
 
