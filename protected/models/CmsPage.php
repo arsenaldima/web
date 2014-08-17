@@ -39,6 +39,7 @@ class CmsPage extends CActiveRecord
 			array('title', 'length', 'max'=>255),
 
             array('image', 'file', 'types'=>'jpg, gif, png'),
+            array('image', 'file', 'types'=>'jpg, gif, png', 'on'=>'update'),
 
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
