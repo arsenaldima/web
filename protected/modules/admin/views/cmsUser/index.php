@@ -3,9 +3,8 @@
 /* @var $model CmsUser */
 
 
-
-
-
+if(Yii::app()->user->hasFlash('error'))
+echo Yii::app()->user->getFlash('error');
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
 	$('.search-form').toggle();
@@ -30,12 +29,39 @@ $('.search-form form').submit(function(){
 )); ?>
 </div><!-- search-form -->
 
+
+
+<?php
+$ar=array('class'=>'CButtonColumn','updateButtonOptions'=>array('style'=>'display:none'));
+
+if(Yii::app()->user->checkAccess(2))
+{  $ar['deleteButtonOptions']= array('style'=>'display:none');
+
+}
+
+    echo "<br>";
+    echo CHtml::form();
+    echo CHtml::submitButton('Разбанить',array('name'=>'noban'));
+    echo CHtml::submitButton('зaбанить',array('name'=>'ban'));
+echo "<br>";
+if(Yii::app()->user->checkAccess(3))
+{
+    echo CHtml::submitButton('Назначить модератором',array('name'=>'mod'));
+    echo CHtml::submitButton('Снять с модераторства',array('name'=>'no_mod'));
+}
+    ?>
+
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'cms-user-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
 		'id',
+        array(
+            'class'=>'CCheckBoxColumn',
+            'id'=>'user_id',
+
+        ),
 		'username',
 		'password',
         'email',
@@ -54,13 +80,15 @@ $('.search-form form').submit(function(){
 
         'role'=>array(
             'name'=>'role',
-            'value'=>'($data->role==1)?"Юзер":($data->role==2)?"Модератор":"Админ"',
-            'filter'=>array(1=>"Юзер",2=>"Модератор",3=>"Модератор"),
+            'value'=>'($data->role==1)?"user":"moderator"',
+            'filter'=>array(1=>"Юзер",2=>"Модератор",3=>"Админ"),
 
         ),
 
-		array(
-			'class'=>'CButtonColumn',
-		),
+		$ar
 	),
-)); ?>
+));
+
+echo CHtml::endForm();
+
+?>

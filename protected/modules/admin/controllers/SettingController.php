@@ -4,7 +4,8 @@ class SettingController extends Controller
 {
 	public function actionIndex()
 	{
-		$this->render('index');
+        $model=CmsSetting::model()->findByPk(1);
+		$this->render('index',array('model'=>$model));
 	}
 
 

@@ -6,8 +6,7 @@
 
 $this->menu=array(
 	array('label'=>'Журнал пользователя', 'url'=>array('index')),
-	array('label'=>'Изменить пользователя', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Удалить', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
+
 
 );
 ?>
@@ -30,7 +29,7 @@ $this->menu=array(
         ),
 		'role'=>array(
             'name'=>'role',
-            'value'=>($data->ban==1)?"User":($data->ban==1)? "Moderator ": "Admin",
+            'value'=>($data->ban==1)?"User":($data->ban==2)? "Moderator ": "Admin",
         ),
 		'email',
 	),

@@ -26,14 +26,7 @@ class CmsCommentController extends Controller
                 'actions'=>array('delete','index','update','view'),
                 'roles'=>array('3'),
             ),
-            array('allow', // allow authenticated user to perform 'create' and 'update' actions
-                'actions'=>array('update','view','delete'),
-                'roles'=>array('2'),
-            ),
-            array('allow', // allow admin user to perform 'admin' and 'delete' actions
-                'actions'=>array('update','delete','view'),
-                'roles'=>array('1'),
-            ),
+
             array('deny',  // deny all users
                 'roles'=>array('*'),
             ),

@@ -30,10 +30,7 @@ class CmsPageController extends Controller
                 'actions'=>array('update','create'),
                 'roles'=>array('2'),
             ),
-            array('allow', // allow admin user to perform 'admin' and 'delete' actions
-                'actions'=>array('update','create'),
-                'roles'=>array('1'),
-            ),
+
             array('deny',  // deny all users
                 'roles'=>array('*'),
             ),

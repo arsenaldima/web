@@ -33,11 +33,11 @@
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
 				    array('label'=>'Home', 'url'=>array('/site/index')),
-                    array('label'=>'Категории', 'url'=>array('/admin/CmsCategory/index')),
+                    array('label'=>'Категории', 'url'=>array('/admin/CmsCategory/index'),'visible'=>Yii::app()->user->checkAccess(3)),
                     array('label'=>'Страницы', 'url'=>array('/admin/CmsPage/index')),
                     array('label'=>'Пользователь', 'url'=>array('/admin/CmsUser/index')),
                     array('label'=>'Коментарии', 'url'=>array('/admin/CmsComment/index')),
-                    array('label'=>'Настройки', 'url'=>array('/admin/setting/index')),
+                    array('label'=>'Настройки', 'url'=>array('/admin/setting/index'),'visible'=>Yii::app()->user->checkAccess(3)),
 
                 array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)

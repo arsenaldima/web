@@ -51,24 +51,7 @@ class CmsUserController extends Controller
 		));
 	}
 
-    public function actionPassword($id)
-    {
-        $model = $this->loadModel($id);
 
-        if(isset($_POST['password']))
-        {
-
-            $model->password=$_POST['password'];
-
-            if($model->save())
-            {
-                $this->render('view',array('model'=>$this->loadModel($id),));
-            }
-
-        }
-        else
-           $this->render('password');
-    }
 
     /**
 	 * Creates a new model.
@@ -81,38 +64,14 @@ class CmsUserController extends Controller
 	 * If update is successful, the browser will be redirected to the 'view' page.
 	 * @param integer $id the ID of the model to be updated
 	 */
-	public function actionUpdate($id)
-	{
-		$model=$this->loadModel($id);
 
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
-		if(isset($_POST['CmsUser']))
-		{
-			$model->attributes=$_POST['CmsUser'];
-			if($model->save())
-				$this->redirect(array('view'));
-		}
-
-		$this->render('update',array(
-			'model'=>$model,
-		));
-	}
 
 	/**
 	 * Deletes a particular model.
 	 * If deletion is successful, the browser will be redirected to the 'admin' page.
 	 * @param integer $id the ID of the model to be deleted
 	 */
-	public function actionDelete($id)
-	{
-		$this->loadModel($id)->delete();
 
-		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('index'));
-	}
 
 	/**
 	 * Lists all models.
@@ -124,6 +83,44 @@ class CmsUserController extends Controller
 	 */
 	public function actionIndex()
 	{
+        $mod=CmsUser::model()->findByPk($_POST['user_id']);
+
+        if(isset($_POST['noban']))
+        {
+
+            if(($mod->role==1)||(($mod->role==1)&&(Yii::app()->user->id==3)))
+                 CmsUser::model()->updateByPk($_POST['user_id'],array('ban'=>0));
+            else
+                 Yii::app()->user->setFlash('error','У вас недостаточно прав');
+
+        }
+        elseif(isset($_POST['ban']))
+        {
+            if(($mod->role==1)||(($mod->role==1)&&(Yii::app()->user->id==3)))
+                  CmsUser::model()->updateByPk($_POST['user_id'],array('ban'=>1));
+            else
+                Yii::app()->user->setFlash('error','У вас недостаточно прав');
+        }
+
+
+
+        if(isset($_POST['mod']))
+        {
+
+            if($mod->role==1)
+                CmsUser::model()->updateByPk($_POST['user_id'],array('role'=>2));
+            else
+                Yii::app()->user->setFlash('error','Пользователь уже являеться модератором');
+
+        }
+        elseif(isset($_POST['no_mod']))
+        {
+            if($mod->role==2)
+                CmsUser::model()->updateByPk($_POST['user_id'],array('role'=>1));
+
+        }
+
+
 		$model=new CmsUser('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['CmsUser']))
