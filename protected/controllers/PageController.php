@@ -22,14 +22,13 @@ class PageController extends Controller
         if(isset($_POST['CmsComment']))
         {
             $model1->page_id=$id;
-            $model1->parent_id=20;//nado menat
 
             if(!Yii::app()->user->isGuest)
                 $model1->user_id=Yii::app()->user->id;// esli polzovatel ne gost tokda soxranaem ego id
 
             $model1->attributes=$_POST['CmsComment'];
 
-            if($model1->save())// soxranaem komentariy
+            if($model1->save())
             {
                 if(($model1->parent_id!=null)&&(!Yii::app()->user->isGuest))
                 {
@@ -45,6 +44,11 @@ class PageController extends Controller
         $this->render('view',array('model1'=> $model1,'model'=> $model,'comments'=>$ar));
     }
 
+public function actionDelete($id)
+{
+    $model=CmsComment::model()->findByPk($id);
+    if(CmsComment::model()->deleteByPk($id))
+    $this->redirect(array('/page/view','id'=>$model->page_id));
 
-
+}
 }
