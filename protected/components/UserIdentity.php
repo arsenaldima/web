@@ -15,14 +15,13 @@ class UserIdentity extends CUserIdentity {
 
 
         // Производим стандартную аутентификацию, описанную в руководстве.
+
+
         $user = CmsUser::model()->find('LOWER(username)=?', array(strtolower($this->username)));
+        if($user->ban==1) die ("Ваш пользователь забанен, для дополнительной инвормации обратитеть к администратору");
         if(($user===null) || (md5('lkjhgfd'.$this->password)!==$user->password)) {
             $this->errorCode = self::ERROR_USERNAME_INVALID;
         } else {
-
-
-            if($user->ban==1)
-                $this->errorCode = self::ERROR_USER_IS_BANNED;
 
 
 
