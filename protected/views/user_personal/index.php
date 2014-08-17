@@ -8,6 +8,57 @@ $this->breadcrumbs=array(
 
 
 ?>
+<script type="text/javascript">
+
+function funS(){
+
+    if($('#but').val()=="Подписаться")
+    $('#but').val("Отписаться");
+    else
+        $('#but').val("Подписаться");
+}
+
+function Fun(){
+    $('#form_sms').hide();
+    $('#metka').show();
+    alert('Сообщение успешно отправлено');
+
+}
+
+$(document).ready(function(){
+
+    $('#but').bind("click",function(){
+
+        $.ajax({
+         url:"/web_test/index.php?r=user_personal/axjax_query",
+         type:"POST",
+         data:({}),
+         dataType:"html",
+         success: funS
+        });
+    })
+
+    $('#metka').bind("click",function(){
+        $('#metka').hide();
+        $('#form_sms').show(1000);
+
+
+    });
+
+    $('#sub_but').bind("click",function(){
+        alert('sdfsdf');
+        $.ajax({
+            url:"/web_test/index.php?r=user_personal/axjax_mail",
+            type:"POST",
+            data:({text: $('#sms_id').val(), id:$('.dima').attr('id')}),
+            dataType:"html",
+            success: Fun
+        });
+    })
+
+})
+</script>
+
 
 <div>
  <br>
@@ -32,7 +83,33 @@ $this->breadcrumbs=array(
 
 <div>
     <?php echo CmsSetting::car_image($model->picture,200,150,'img-thumbnail bord','./images/avatars/');?>
-    <?php echo CHtml::button('asd',array('id'=>'but'))?>
+    <br>
+    <br>
+    <?php
+    if($id==Yii::app()->user->id)
+    {
+        ($model->podpis==0)?$dim="Отписаться":$dim="Подписаться";
+
+    echo CHtml::button($dim,array('id'=>'but','class'=>'btn btn-primary'));}?>
+    <br>
+    <br>
+    <br>
+    <a  id='metka' style="cursor: pointer">Отправить личное сообщение пользователю</a>
+    <br>
+    <br>
+    <div id='form_sms' style="display: none">
+
+    <?php
+    echo CHtml::form('','POST',array('class'=>'dima1','id'=>$id));
+    echo CHtml::textArea('sms','',array('id'=>'sms_id'));
+    echo "<br>";
+    echo CHtml::submitButton('Отправить',array('class'=>'btn btn-primary', 'id'=>'sub_but'));
+    echo CHtml::endForm();
+    ?>
+
+</div>
+
+
 </div>
 
 
@@ -83,20 +160,3 @@ if($model2!=null)
 
 
 
-<script type="text/javascript">
-
-    $(document).ready(function(){
-        $('#but').click(function(){
-             $(this).val('подписан');
-
-            $.post('user_personal/subscribe').done(function(){
-                alert('sdfsdf');
-
-            })
-
-        })
-
-    })
-
-
-</script>
