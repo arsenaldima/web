@@ -190,14 +190,30 @@ public function actionsubscribe(){
                 CmsPage::model()->updateByPk($id,array('path_img'=>$rand.$model->image->getName(),'content'=>$model->content, 'title'=>$model->title));
 
             }
-
-
-
                 $this->redirect(array('index','id'=>Yii::app()->user->id));
         }
 
         $this->render('update',array(
             'model'=>$model,
         ));
+    }
+
+    public function actionaxjax_query()
+    {
+        $model=CmsUser::model()->findByPk(Yii::app()->user->id);
+
+
+        if($model->podpis==0)
+            return CmsUser::model()->updateByPk(Yii::app()->user->id,array('podpis'=>'1'));
+        else
+            return CmsUser::model()->updateByPk(Yii::app()->user->id,array('podpis'=>'0'));
+
+    }
+    public function actionaxjax_mail()
+    {
+        if(isset($_POST['text']))
+        {
+         return  CmsUser::sendSms($_POST['text'],$_POST['id']);
+        }
     }
 }
