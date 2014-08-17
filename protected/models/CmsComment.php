@@ -36,7 +36,7 @@ class CmsComment extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('page_id, created, user_id', 'numerical', 'integerOnly'=>true),
+			array('page_id, created, user_id, parent_id', 'numerical', 'integerOnly'=>true),
 			array('guest', 'length', 'max'=>255),
             array('content','required'),
             array('guest','email','on'=>'ComSet'),
@@ -45,7 +45,7 @@ class CmsComment extends CActiveRecord
             array('content', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, content, page_id, created, user_id, guest, status', 'safe', 'on'=>'search'),
+			array('id, content,parent_id, page_id, created, user_id, guest, status', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -125,7 +125,8 @@ class CmsComment extends CActiveRecord
     public function beforeSave(){
 
         if($this->isNewRecord)
-        {$this->created=time();
+        {
+            $this->created=time();
 
 
         }
