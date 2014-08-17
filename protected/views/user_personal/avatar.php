@@ -11,16 +11,6 @@
 ?>
 
 
-<?php $this->widget('application.extensions.dropzone.EDropzone', array(
-    'model' => $model->image,
-    'attribute' => 'file',
-    'url' => $this->createUrl('user_personal/AjexTest'),
-    'mimeTypes' => array('image/jpeg', 'image/png'),
-    'onSuccess' => 'someJsFunction();',
-    'options' => array(),
-)); ?>
-
-
 <?php $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
     'id' => 'cms-user-form',
     'htmlOptions'=>array('enctype'=>'multipart/form-data'),
@@ -28,7 +18,8 @@
 )); ?>
 
     <div class="row">
-        <?php echo $form->fileFieldRow($model, 'image'); ?> <!-- Вот наше поле загрузки картинки -->
+        <?php echo $form->fileFieldRow($model, 'image');
+        ?> <!-- Вот наше поле загрузки картинки -->
         <br>
 
 
