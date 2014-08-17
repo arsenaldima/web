@@ -81,6 +81,7 @@ class SiteController extends Controller
 	 */
 	public function actionLogin()
 	{
+
         $service = Yii::app()->request->getQuery('service');
         if (isset($service)) {
             $authIdentity = Yii::app()->eauth->getIdentity($service);
@@ -121,9 +122,14 @@ class SiteController extends Controller
 		{
 			$model->attributes=$_POST['LoginForm'];
 			// validate user input and redirect to the previous page if valid
-			if($model->validate() && $model->login())
-				$this->redirect(Yii::app()->user->returnUrl);
-		}
+            $model1=CmsUser::model()->findByAttributes(array('username'=>$model->username));
+
+            if($model->validate() && $model->login())
+                {
+
+
+                    $this->redirect(array('user_personal/index','id'=>$model1->id));}
+           		}
 		// display the login form
 		$this->render('login',array('model'=>$model));
 	}
@@ -134,7 +140,7 @@ class SiteController extends Controller
 	public function actionLogout()
 	{
 		Yii::app()->user->logout();
-		$this->redirect(Yii::app()->homeUrl);
+		$this->redirect(Yii::app()->user->returnUrl);
 	}
 
 
