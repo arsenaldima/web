@@ -66,7 +66,7 @@ class CmsUser extends CActiveRecord
 
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, data_avtor, podpis ,username, password,prigl_id, created, ban, role, email', 'safe', 'on'=>'search'),
+			array('id, data_avtor, podpis ,username, password,prigl_id, created, ban, email', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -126,8 +126,8 @@ class CmsUser extends CActiveRecord
 		$criteria->compare('password',$this->password,true);
 		$criteria->compare('created',$this->created);
 		$criteria->compare('ban',$this->ban);
-		$criteria->compare('role',$this->role);
-		$criteria->compare('email',$this->email,true);
+        $criteria->compare('role',$this->role);
+        $criteria->compare('email',$this->email,true);
         $criteria->compare('prigl_id',$this->prigl_id,true);
 
 		return new CActiveDataProvider($this, array(
@@ -208,6 +208,18 @@ class CmsUser extends CActiveRecord
         Yii::app()->mailer->AddAddress($user->email);
         Yii::app()->mailer->Subject = 'Смена пароля';
         Yii::app()->mailer->Body = Yii::app()->controller->renderPartial('/email/pas', array('user' => $user), true);
+        Yii::app()->mailer->Send();
+
+        return true;
+    }
+
+    public static function sendSms($text,$id)
+    {
+        $user = self::model()->findByPk(Yii::app()->user->id);
+        $user2 = self::model()->findByPk($id);
+        Yii::app()->mailer->AddAddress($user2->email);
+        Yii::app()->mailer->Subject = 'Личное сообщение';
+        Yii::app()->mailer->Body = Yii::app()->controller->renderPartial('/email/sms', array('user' => $user,'text' => $text), true);
         Yii::app()->mailer->Send();
 
         return true;
