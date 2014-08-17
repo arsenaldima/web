@@ -20,31 +20,22 @@
         'enableAjaxValidation'=>false,
     )); ?>
 
-
+<div>
+   <h3 id='new_kom'>Новый комментарий</h3>
+   <h3 id='otvet_kom' style='display: none'>Ответ на комментарий</h3>
+</div>
 
     <?php echo $form->errorSummary($model); ?>
 
-
-
-
-
-    <div class="row">
-        <hr />
-        <div class="black_r" id="dd">
-
-            Новый комментарий
-
-        </div>
-
-        <div class="white_r" id="dd2">
-
-            Ответ на комментарии
-
-        </div>
         <br>
-        <?php echo $form->textArea($model,'content',array('rows'=>6, 'cols'=>50)); ?>
+        <?php echo $form->textArea($model,'content',array('rows'=>6, 'cols'=>200)); ?>
         <?php echo $form->error($model,'content'); ?>
-    </div>
+
+
+
+
+<?php echo $form->hiddenField($model,'parent_id',array('id'=>'parent')); ?>
+    <?php echo $form->error($model,'parent_id'); ?>
 
     <?php if(Yii::app()->user->isGuest):?>
 
@@ -55,17 +46,18 @@
         <br>
         <?php echo $form->textField($model,'guest',array('size'=>60,'maxlength'=>255)); ?>
         <?php echo $form->error($model,'guest'); ?>
-    </div>
+
 
     <?php  endif ?>
 
 
-    <?php echo $form->textField($model,'parent_id',array('class'=>'parent_id','id'=>'parent','value'=>'')); ?>
+
 
     <div class="row buttons">
-        <?php echo CHtml::submitButton('Отправить'); ?>
+        <?php echo CHtml::submitButton('Отправить',array('class'=>'btn btn-primary')); ?>
     </div>
 
+        </div>
     <?php $this->endWidget(); ?>
 
 </div><!-- form -->
