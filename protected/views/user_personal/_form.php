@@ -41,12 +41,9 @@
     <br>
 	<div class="row">
 		<?php echo $form->labelEx($model,'status'); ?>
-		<?php if(Yii::app()->user->checkaccess(3)||Yii::app()->user->checkaccess(2)): ?>
-        <?php echo $form->dropDownList($model,'status',array(0=>"Черновик",1=>"На модерацию",2=>"Опубликовать",3=>"Снять с пуб")); ?>
-        <?php endif ?>
-        <?php if(Yii::app()->user->checkaccess(1)): ?>
+
         <?php echo $form->dropDownList($model,'status',array(0=>"Черновик",1=>"На модерацию")); ?>
-        <?php endif ?>
+
         <?php echo $form->error($model,'status'); ?>
 	</div>
     <br>

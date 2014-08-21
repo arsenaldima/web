@@ -4,6 +4,7 @@
 /* @var $form CActiveForm */
 ?>
 
+
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
@@ -29,24 +30,30 @@
 
     <div class="row">
         <?php echo $form->labelEx($model,'image'); ?>
-        <?php echo $form->fileField($model,'image'); ?>
+        <?php
+        if(!$model->isNewRecord)
+        {echo  CmsSetting::car_image($model->path_img,200,150,'img-thumbnail','./images/pages/');
+        echo "<br>";
+        echo "<br>";
+        }
+        echo $form->fileField($model,'image');
+
+
+        ?>
         <?php echo $form->error($model,'image'); ?>
     </div>
 
     <div class="row">
         <?php echo $form->labelEx($model,'content'); ?>
-        <?php $this->widget('application.extensions.ckeditor.CKEditor', array( 'model' => $model, 'attribute'=>'content', 'language'=>'ru', 'editorTemplate'=>'full', )); ?>
+        <?php $this->widget('application.extensions.ckeditor.CKEditor', array( 'model' => $model, 'attribute'=>'content', 'language'=>'ru', 'editorTemplate'=>'full' )); ?>
         <?php echo $form->error($model,'content'); ?>
     </div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'status'); ?>
-		<?php if(Yii::app()->user->checkaccess(3)||Yii::app()->user->checkaccess(2)): ?>
-        <?php echo $form->dropDownList($model,'status',array(0=>"Черновик",1=>"На модерацию",2=>"Опубликовать",3=>"Снять с пуб")); ?>
-        <?php endif ?>
-        <?php if(Yii::app()->user->checkaccess(1)): ?>
-        <?php echo $form->dropDownList($model,'status',array(0=>"Черновик",1=>"На модерацию")); ?>
-        <?php endif ?>
+		<?php echo $form->dropDownList($model,'status',array(2=>"Опубликовать",3=>"Снять с пуб")); ?>
+
+
         <?php echo $form->error($model,'status'); ?>
 	</div>
 

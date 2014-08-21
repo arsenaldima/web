@@ -35,6 +35,8 @@
     <?php foreach($comments as $comment):?>
         <li id="<?php echo $comment->id; ?>">
 
+            <?php if($comment->status==1):?>
+
             <div class="panel">
 
                <?php if($comment->user_id!=null): ?>
@@ -54,6 +56,7 @@
             <?php if(count($comment->childs) > 0 ) $this->renderPartial('_view', array('comments' => $comment->childs));  ?>
             <?php if(count($comment->childs) <= 0 ): ?> <a id="<?php echo $comment->id; ?>" class="li_n">Ответить</a>  <?php endif?>
 
+            <?php endif ?>
         </li>
     <?php endforeach;?>
 </ol>

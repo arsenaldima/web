@@ -57,7 +57,7 @@ class CmsComment extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array('user'=>array(self::BELONGS_TO,'CmsUser','user_id'),
-           'page'=>array(self::BELONGS_TO,'CmsPage','id'),
+           'page'=>array(self::BELONGS_TO,'CmsPage','page_id'),
            'childs' => array(self::HAS_MANY, 'Comment', 'parent_id'),
 		);
 	}
@@ -127,6 +127,9 @@ class CmsComment extends CActiveRecord
         if($this->isNewRecord)
         {
             $this->created=time();
+            $model=CmsSetting::model()->findByPk(1);
+            if($model->poblicazia_com==1)
+                $this->status=1;
 
 
         }

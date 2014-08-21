@@ -3,11 +3,6 @@
 /* @var $model CmsPage */
 
 
-$this->menu=array(
-
-	array('label'=>'Создание Страницы', 'url'=>array('create')),
-);
-
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
 	$('.search-form').toggle();
@@ -27,16 +22,26 @@ $('.search-form form').submit(function(){
 
 <?php echo CHtml::link('Расширеный поиск','#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
+
 <?php $this->renderPartial('_search',array(
 	'model'=>$model,
 )); ?>
+
 </div><!-- search-form -->
 
-
+<?php
+echo CHtml::form();
+echo "<br>";
+echo CHtml::submitButton('Опубликовать',array('name'=>'opyblic','class'=>'btn btn-primary','style'=>'width : 200px'));
+echo "<br>";
+echo "<br>";
+echo CHtml::submitButton('Снять с публикации',array('name'=>'del','class'=>'btn btn-primary','style'=>'width : 200px'));
+?>
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'cms-page-grid',
 	'dataProvider'=>$model->search(),
+    'selectableRows'=>2,
 	'filter'=>$model,
 	'columns'=>array(
 		'id' => array(
@@ -44,6 +49,11 @@ $('.search-form form').submit(function(){
             'headerHtmlOptions'=>array('width'=>30),
 
         ),
+        array('class'=>'CCheckBoxColumn',
+        'id'=>'page_id',
+
+        ),
+
 		'title',
 	    'created'=>array(
             'name'=>'created',
@@ -52,8 +62,8 @@ $('.search-form form').submit(function(){
         ),
 		'status'=>array(
             'name'=>'status',
-            'value'=>'($data->status==0)? "Черновик":($data->status==1)? "На модерацию":($data->status==2) ? "Опубликовать":"Снять с пуб"',
-            'filter'=>array(0=>"Черновик",1=>"На модерацию",2=>"Опубликовать",3=>"Снять с пуб"),
+            'value'=>'$data->getStatus($data->status)',
+            'filter'=>array(1=>"На модерацию",2=>"Опубликовать",3=>"Снять с пуб"),
 
         ),
 		'category_id'=> array(
@@ -73,3 +83,7 @@ $('.search-form form').submit(function(){
 		),
 	),
 )); ?>
+
+<?php
+echo CHtml::endForm();
+?>

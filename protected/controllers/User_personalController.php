@@ -157,6 +157,10 @@ public function actionsubscribe(){
         {
 
             $model->image=CUploadedFile::getInstance($model,'image');
+            $rand=uniqid();
+            $model->image->saveAs('c:/WebServers/home/localhost/www/web_test/images/pages/'.$rand.$model->image->name);
+            $model->path_img = $model->image->name;
+
             $model->attributes=$_POST['CmsPage'];
 
             if($model->save())

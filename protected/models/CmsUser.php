@@ -129,7 +129,7 @@ class CmsUser extends CActiveRecord
         $criteria->compare('role',$this->role);
         $criteria->compare('email',$this->email,true);
         $criteria->compare('prigl_id',$this->prigl_id,true);
-
+        $criteria->condition='role<3';
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
@@ -225,4 +225,10 @@ class CmsUser extends CActiveRecord
         return true;
     }
 
+    public static function getUser($stat)
+    {
+
+        $ar=array(1=>'Пользователь',2=>'Модератор',3=>'Админ');
+        return $ar[$stat];
+    }
 }

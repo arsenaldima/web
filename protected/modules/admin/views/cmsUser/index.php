@@ -41,13 +41,14 @@ if(Yii::app()->user->checkAccess(2))
 
     echo "<br>";
     echo CHtml::form();
-    echo CHtml::submitButton('Разбанить',array('name'=>'noban'));
-    echo CHtml::submitButton('зaбанить',array('name'=>'ban'));
+    echo CHtml::submitButton('Разбанить',array('name'=>'noban','class'=>'btn btn-primary','style'=>'width : 200px'));
+    echo CHtml::submitButton('зaбанить',array('name'=>'ban', 'class'=>'btn btn-primary','style'=>'width : 200px'));
+echo "<br>";
 echo "<br>";
 if(Yii::app()->user->checkAccess(3))
 {
-    echo CHtml::submitButton('Назначить модератором',array('name'=>'mod'));
-    echo CHtml::submitButton('Снять с модераторства',array('name'=>'no_mod'));
+    echo CHtml::submitButton('Назначить модератором',array('name'=>'mod','class'=>'btn btn-primary','style'=>'width : 200px'));
+    echo CHtml::submitButton('Снять с модераторства',array('name'=>'no_mod','class'=>'btn btn-primary','style'=>'width : 200px'));
 }
     ?>
 
@@ -80,7 +81,7 @@ if(Yii::app()->user->checkAccess(3))
 
         'role'=>array(
             'name'=>'role',
-            'value'=>'($data->role==1)?"user":"moderator"',
+            'value'=>'$data->getUser($data->role)',
             'filter'=>array(1=>"Юзер",2=>"Модератор",3=>"Админ"),
 
         ),

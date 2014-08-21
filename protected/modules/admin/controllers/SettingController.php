@@ -4,6 +4,16 @@ class SettingController extends Controller
 {
 	public function actionIndex()
 	{
+        $model=new CmsSetting;
+
+        if(isset($_POST['CmsSetting']))
+        {
+            $model->attributes=$_POST['CmsSetting'];
+            $flag=CmsSetting::model()->updateByPk(1,array('ct_page'=>$model->ct_page,'time'=>$model->time,'podtv_email'=>$model->podtv_email, 'poblicazia_com'=>$model->poblicazia_com, 'publicazia_stat'=>$model->publicazia_stat, 'gost_com'=>$model->gost_com ));
+        }
+
+
+
         $model=CmsSetting::model()->findByPk(1);
 		$this->render('index',array('model'=>$model));
 	}

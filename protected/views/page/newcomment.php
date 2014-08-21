@@ -10,6 +10,9 @@
 
 
 <div class="form">
+<?php
+$flag=CmsSetting::model()->findByPk(1);
+if(!Yii::app()->user->isGuest||(Yii::app()->user->isGuest && $flag->gost_com)): ?>
 
     <?php $form=$this->beginWidget('CActiveForm', array(
         'id'=>'cms-comment-form',
@@ -61,3 +64,5 @@
     <?php $this->endWidget(); ?>
 
 </div><!-- form -->
+
+<?php endif ?>

@@ -116,6 +116,12 @@ class CmsCommentController extends Controller
 	 */
 	public function actionIndex()
 	{
+
+        if(isset($_POST['opyblic']))
+        {
+            CmsComment::model()->updateByPk($_POST['page_id'],array('status'=>1));
+        }
+
 		$model=new CmsComment('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['CmsComment']))

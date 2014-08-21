@@ -55,7 +55,8 @@ class CmsPage extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array('user'=> array(self::BELONGS_TO,'CmsUser','user_id'),
-            'category'=> array(self::BELONGS_TO,'CmsCategory','category_id'),
+                     'category'=> array(self::BELONGS_TO,'CmsCategory','category_id'),
+
 
 
 		);
@@ -74,7 +75,8 @@ class CmsPage extends CActiveRecord
 			'status' => 'Статус',
 			'category_id' => 'Категория',
             'user_id'=>'Пользователь',
-            'path_img'=>'Изображение страницы'
+            'path_img'=>'Изображение страницы',
+            'image'=>'Титульная картинка страницы',
 		);
 	}
 
@@ -103,6 +105,7 @@ class CmsPage extends CActiveRecord
 		$criteria->compare('status',$this->status);
 		$criteria->compare('category_id',$this->category_id);
         $criteria->compare('user_id',$this->user_id);
+        $criteria->condition='status > 0';
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -135,6 +138,11 @@ class CmsPage extends CActiveRecord
             else
                 $this->user_id=Yii::app()->user->id;
 
+            $model=CmsSetting::model()->findByPk(1);
+
+            if(($model->publicazia_stat==1)&&($this->status!=0))
+                $this->status=2;
+
         }
         return parent::beforeSave();
     }
@@ -154,10 +162,15 @@ class CmsPage extends CActiveRecord
     {
         $criteria= new CDbCriteria;
         $criteria->compare('category_id',$id);
-        $criteria->condition='status = 1';
+        $criteria->condition='status = 2';
         $model=CmsSetting::model()->findByPk(1);
         return new CActiveDataProvider('CmsPage',array('criteria'=>$criteria,'pagination'=>array('pageSize'=>$model->ct_page),));
     }
 
+    public static function getStatus($stat)
+    {
+        $ar = array(1=>'На модерацию',2=>'Опубликовать',3=>'Снять с пуб');
+        return $ar[$stat];
+    }
 
 }

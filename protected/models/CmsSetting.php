@@ -6,8 +6,12 @@
  * The followings are the available columns in table 'cms_setting':
  * @property integer $id
  * @property integer $ct_page
- * @property integer $ct_com
  * @property integer $time
+ * @property integer $podtv_email
+ * @property integer $poblicazia_com
+ * @property integer $publicazia_stat
+ * @property integer $gost_com
+ *
  */
 class CmsSetting extends CActiveRecord
 {
@@ -27,11 +31,11 @@ class CmsSetting extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('ct_page, ct_com', 'required'),
-			array('ct_page, ct_com', 'numerical', 'integerOnly'=>true),
+			array('ct_page,  time', 'required'),
+			array('ct_page,  podtv_email, poblicazia_com, publicazia_stat, gost_com', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, ct_page, ct_com, time', 'safe', 'on'=>'search'),
+			array('id, ct_page,  time', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -53,9 +57,15 @@ class CmsSetting extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'ct_page' => 'Количество страниц для статей',
-			'ct_com' => 'Количество страниц для комментариев',
-            'time'=>'Время жизни ссылки',
+			'ct_page' => 'Количество статей на страницу',
+		   'time'=>'Время жизни ссылки',
+            'podtv_email'=>'Подтверждение email при авторизации ',
+            'poblicazia_com'=>'Публикация комментариев после модерации ',
+            'publicazia_stat'=>'Публикация статьи после модерации',
+            'gost_com'=>'Может гость оставлять комментарии',
+
+
+
 		);
 	}
 

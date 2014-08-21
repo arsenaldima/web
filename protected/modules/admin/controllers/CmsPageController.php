@@ -23,12 +23,8 @@ class CmsPageController extends Controller
 	{
         return array(
             array('allow',  // allow all users to perform 'index' and 'view' actions
-                'actions'=>array('delete','index','update','view','create'),
+                'actions'=>array('delete','index','update'),
                 'roles'=>array('3'),
-            ),
-            array('allow', // allow authenticated user to perform 'create' and 'update' actions
-                'actions'=>array('update','create'),
-                'roles'=>array('2'),
             ),
 
             array('deny',  // deny all users
@@ -47,28 +43,6 @@ class CmsPageController extends Controller
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate()
-	{
-		$model=new CmsPage;
-
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
-		if(isset($_POST['CmsPage']))
-		{
-
-            $model->image=CUploadedFile::getInstance($model,'image');
-            $model->attributes=$_POST['CmsPage'];
-
-					if($model->save())
-				$this->redirect(array('index'));
-
-		}
-
-		$this->render('create',array(
-			'model'=>$model,
-		));
-	}
 
 	/**
 	 * Updates a particular model.
@@ -79,19 +53,29 @@ class CmsPageController extends Controller
 	{
 		$model=$this->loadModel($id);
 
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['CmsPage']))
-		{
-			$model->attributes=$_POST['CmsPage'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
-		}
+        // Uncomment the following line if AJAX validation is needed
+        // $this->performAjaxValidation($model);
 
-		$this->render('update',array(
-			'model'=>$model,
-		));
+        if(isset($_POST['CmsPage']))
+        {
+            if($model->validate())
+            {
+                $model->attributes=$_POST['CmsPage'];
+                $image=CUploadedFile::getInstance($model,'image');
+                $model->image=$image;
+                $rand=uniqid();
+                $model->image->saveAs('c:/WebServers/home/localhost/www/web_test/images/pages/'.$rand.$model->image->name);
+                $model->path_img = $model->image->name;
+                CmsPage::model()->updateByPk($id,array('path_img'=>$rand.$model->image->getName(),'content'=>$model->content, 'title'=>$model->title));
+
+            }
+            $this->redirect(array('index'));
+        }
+
+        $this->render('update',array(
+            'model'=>$model,
+        ));
 	}
 
 	/**
@@ -117,6 +101,16 @@ class CmsPageController extends Controller
 	 */
 	public function actionIndex()
 	{
+        if(isset($_POST['opyblic']))
+        {
+            CmsPage::model()->updateByPk($_POST['page_id'],array('status'=>2));
+        }
+
+        if(isset($_POST['del']))
+        {
+            CmsPage::model()->updateByPk($_POST['page_id'],array('status'=>3));
+        }
+
 		$model=new CmsPage('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['CmsPage']))

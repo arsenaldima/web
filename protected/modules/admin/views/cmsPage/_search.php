@@ -24,7 +24,7 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'status'); ?>
-		<?php echo $form->dropDownList($model,'status',array(''=>'',0=>"Черновик",1=>"На модерацию",2=>"Опубликовать",3=>"Снять с пуб")); ?>
+		<?php echo $form->dropDownList($model,'status',array(''=>'',1=>"На модерацию",2=>"Опубликовать",3=>"Снять с пуб")); ?>
 	</div>
 
 	<div class="row">

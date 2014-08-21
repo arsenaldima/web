@@ -29,14 +29,27 @@ $('.search-form form').submit(function(){
 )); ?>
 </div><!-- search-form -->
 
+<?php
+echo CHtml::form();
+echo "<br>";
+echo CHtml::submitButton('Опубликовать',array('name'=>'opyblic','class'=>'btn btn-primary','style'=>'width : 200px'));
+
+?>
+
+
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'cms-comment-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
+    'selectableRows'=>2,
 	'columns'=>array(
 		'id'=>array(
             'name'=>'id',
             'headerHtmlOptions'=>array('width'=>30),
+        ),
+        array('class'=>'CCheckBoxColumn',
+            'id'=>'page_id',
+
         ),
         'status'=>array(
             'name'=>'status',
