@@ -32,8 +32,18 @@ class CmsCategoryController extends Controller
 				'roles'=>array('3'),
 			),
 
+            array('deny',  // allow all users to perform 'index' and 'view' actions
+                'actions'=>array('create','update','delete','index'),
+                'roles'=>array('2'),
+            ),
+            array('deny',  // allow all users to perform 'index' and 'view' actions
+                'actions'=>array('create','update','delete','index'),
+                'roles'=>array('1'),
+            ),
+
 			array('deny',  // deny all users
-				'users'=>array('*'),
+                'actions'=>array('create','update','delete','index'),
+                'roles'=>array('?'),
 			),
 		);
 	}

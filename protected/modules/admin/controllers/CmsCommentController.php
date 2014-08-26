@@ -22,14 +22,26 @@ class CmsCommentController extends Controller
 	public function accessRules()
 	{
         return array(
+
             array('allow',  // allow all users to perform 'index' and 'view' actions
                 'actions'=>array('delete','index','update','view'),
                 'roles'=>array('3'),
             ),
 
-            array('deny',  // deny all users
-                'roles'=>array('*'),
+            array('allow',  // deny all users
+                'actions'=>array('delete','index','update','view'),
+                'roles'=>array('2'),
             ),
+
+            array('deny',  // deny all users
+                'actions'=>array('delete','index','update','view'),
+                'roles'=>array('1'),),
+
+                array('deny',  // deny all users
+                    'actions'=>array('delete','index','update','view'),
+                    'roles'=>array('?'),
+                ),
+
         );
 	}
 
@@ -48,24 +60,6 @@ class CmsCommentController extends Controller
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate()
-	{
-		$model=new CmsComment;
-
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
-		if(isset($_POST['CmsComment']))
-		{
-			$model->attributes=$_POST['CmsComment'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
-		}
-
-		$this->render('create',array(
-			'model'=>$model,
-		));
-	}
 
 	/**
 	 * Updates a particular model.

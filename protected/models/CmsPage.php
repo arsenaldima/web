@@ -132,6 +132,7 @@ class CmsPage extends CActiveRecord
     {
         if($this->isNewRecord)
         {
+            $this->created=time();
 
             if(Yii::app()->user->isGuest)
                 $this->user_id=null;
@@ -153,7 +154,7 @@ class CmsPage extends CActiveRecord
         $criteria= new CDbCriteria;
         $criteria->compare('user_id',$id);
         $model=CmsSetting::model()->findByPk(1);
-        return new CActiveDataProvider('CmsPage',array('criteria'=>$criteria,'pagination'=>array('pageSize'=>$model->ct_page),));
+        return new CActiveDataProvider('CmsPage',array('criteria'=>$criteria,'pagination'=>array('pageSize'=>5),));
     }
 
 

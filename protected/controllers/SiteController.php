@@ -122,16 +122,29 @@ class SiteController extends Controller
 		{
 			$model->attributes=$_POST['LoginForm'];
 			// validate user input and redirect to the previous page if valid
-            $model1=CmsUser::model()->findByAttributes(array('username'=>$model->username));
-
-            if($model->validate() && $model->login())
-                {
+           // $model1=CmsUser::model()->findByAttributes(array('username'=>$model->username));
 
 
-                    $this->redirect(array('user_personal/index','id'=>$model1->id));}
-           		}
+            $model_set=CmsSetting::model()->findByPk(1);
+
+            if($model_set->podtv_email==1)
+            {
+                $flag_z=true;
+            $flag=CmsUser::model()->sendAvtor($model->username,$model->password);
+                $model=new LoginForm();
+                $this->redirect(array('site/avtor','flag'=>$flag));
+            }
+            else
+                    if($model->validate() && $model->login())
+                        {
+                           $this->redirect(array('user_personal/index','id'=>Yii::app()->user->id));
+                        }
+
+        }
+        $flag_z=false;
+        $flag=false;
 		// display the login form
-		$this->render('login',array('model'=>$model));
+		$this->render('login',array('model'=>$model, 'flag'=>$flag_z, 'flag2'=>$flag));
 	}
 
 	/**
@@ -143,6 +156,22 @@ class SiteController extends Controller
 		$this->redirect(Yii::app()->user->returnUrl);
 	}
 
+public function actionAvto($id)
+{
+$model= new LoginForm();
+$model2=CmsUser::model()->findByPk($id);
 
+$model->username=$model2->username;
+$model->password=$model2->password;
 
+    if($model->validate() && $model->login())
+    {
+        $this->redirect(array('user_personal/index','id'=>Yii::app()->user->id));
+    }
+}
+
+    public function actionavtor($flag)
+    {
+        $this->render('avtor',array('flag'=>$flag));
+    }
 }

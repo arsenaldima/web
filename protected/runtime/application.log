@@ -5346,3 +5346,1245 @@ in Z:\home\localhost\www\web_test\index.php (13)
 2014/08/21 18:53:14 [warning] [application] Не удалось присвоить небезопасный атрибут "image" класса "CmsPage".
 in Z:\home\localhost\www\web_test\protected\controllers\User_personalController.php (164)
 in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/22 10:46:13 [error] [php] session_regenerate_id() [<a href='function.session-regenerate-id'>function.session-regenerate-id</a>]: Cannot regenerate session id - headers already sent (Z:\home\localhost\www\web_test\framework\web\CHttpSession.php:181)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\auth\CWebUser.php(233): WebUser->changeIdentity()
+#1 Z:\home\localhost\www\web_test\protected\models\LoginForm.php(74): WebUser->login()
+#2 Z:\home\localhost\www\web_test\protected\controllers\SiteController.php(127): LoginForm->login()
+#3 Z:\home\localhost\www\web_test\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 Z:\home\localhost\www\web_test\framework\web\CController.php(286): SiteController->runAction()
+#6 Z:\home\localhost\www\web_test\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): SiteController->run()
+#8 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=site/login
+in Z:\home\localhost\www\web_test\protected\models\LoginForm.php (74)
+in Z:\home\localhost\www\web_test\protected\controllers\SiteController.php (127)
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/22 10:48:19 [error] [php] session_regenerate_id() [<a href='function.session-regenerate-id'>function.session-regenerate-id</a>]: Cannot regenerate session id - headers already sent (Z:\home\localhost\www\web_test\framework\web\CHttpSession.php:181)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\auth\CWebUser.php(233): WebUser->changeIdentity()
+#1 Z:\home\localhost\www\web_test\protected\models\LoginForm.php(74): WebUser->login()
+#2 Z:\home\localhost\www\web_test\protected\controllers\SiteController.php(127): LoginForm->login()
+#3 Z:\home\localhost\www\web_test\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 Z:\home\localhost\www\web_test\framework\web\CController.php(286): SiteController->runAction()
+#6 Z:\home\localhost\www\web_test\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): SiteController->run()
+#8 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=site/login
+in Z:\home\localhost\www\web_test\protected\models\LoginForm.php (74)
+in Z:\home\localhost\www\web_test\protected\controllers\SiteController.php (127)
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/22 10:50:18 [error] [php] Cannot modify header information - headers already sent by (output started at Z:\home\localhost\www\web_test\protected\models\LoginForm.php:1) (Z:\home\localhost\www\web_test\framework\web\CHttpRequest.php:803)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\protected\controllers\SiteController.php(131): SiteController->redirect()
+#1 Z:\home\localhost\www\web_test\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#2 Z:\home\localhost\www\web_test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 Z:\home\localhost\www\web_test\framework\web\CController.php(286): SiteController->runAction()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#5 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): SiteController->run()
+#6 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=site/login
+in Z:\home\localhost\www\web_test\protected\controllers\SiteController.php (131)
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/22 10:50:45 [error] [php] Cannot modify header information - headers already sent by (output started at Z:\home\localhost\www\web_test\protected\models\LoginForm.php:1) (Z:\home\localhost\www\web_test\framework\web\CHttpRequest.php:803)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\protected\controllers\SiteController.php(131): SiteController->redirect()
+#1 Z:\home\localhost\www\web_test\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#2 Z:\home\localhost\www\web_test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 Z:\home\localhost\www\web_test\framework\web\CController.php(286): SiteController->runAction()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#5 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): SiteController->run()
+#6 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=site/login
+in Z:\home\localhost\www\web_test\protected\controllers\SiteController.php (131)
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/22 10:51:40 [error] [php] session_regenerate_id() [<a href='function.session-regenerate-id'>function.session-regenerate-id</a>]: Cannot regenerate session id - headers already sent (Z:\home\localhost\www\web_test\framework\web\CHttpSession.php:181)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\auth\CWebUser.php(233): WebUser->changeIdentity()
+#1 Z:\home\localhost\www\web_test\protected\models\LoginForm.php(74): WebUser->login()
+#2 Z:\home\localhost\www\web_test\protected\controllers\SiteController.php(127): LoginForm->login()
+#3 Z:\home\localhost\www\web_test\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 Z:\home\localhost\www\web_test\framework\web\CController.php(286): SiteController->runAction()
+#6 Z:\home\localhost\www\web_test\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): SiteController->run()
+#8 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=site/login
+in Z:\home\localhost\www\web_test\protected\models\LoginForm.php (74)
+in Z:\home\localhost\www\web_test\protected\controllers\SiteController.php (127)
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/22 10:52:26 [error] [php] session_regenerate_id() [<a href='function.session-regenerate-id'>function.session-regenerate-id</a>]: Cannot regenerate session id - headers already sent (Z:\home\localhost\www\web_test\framework\web\CHttpSession.php:181)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\auth\CWebUser.php(233): WebUser->changeIdentity()
+#1 Z:\home\localhost\www\web_test\protected\models\LoginForm.php(74): WebUser->login()
+#2 Z:\home\localhost\www\web_test\protected\controllers\SiteController.php(127): LoginForm->login()
+#3 Z:\home\localhost\www\web_test\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 Z:\home\localhost\www\web_test\framework\web\CController.php(286): SiteController->runAction()
+#6 Z:\home\localhost\www\web_test\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): SiteController->run()
+#8 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=site/login
+in Z:\home\localhost\www\web_test\protected\models\LoginForm.php (74)
+in Z:\home\localhost\www\web_test\protected\controllers\SiteController.php (127)
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/22 10:54:02 [error] [php] Cannot modify header information - headers already sent by (output started at Z:\home\localhost\www\web_test\protected\models\LoginForm.php:1) (Z:\home\localhost\www\web_test\framework\web\CHttpRequest.php:803)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\protected\controllers\SiteController.php(131): SiteController->redirect()
+#1 Z:\home\localhost\www\web_test\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#2 Z:\home\localhost\www\web_test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 Z:\home\localhost\www\web_test\framework\web\CController.php(286): SiteController->runAction()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#5 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): SiteController->run()
+#6 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=site/login
+in Z:\home\localhost\www\web_test\protected\controllers\SiteController.php (131)
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/22 10:56:19 [error] [php] session_regenerate_id() [<a href='function.session-regenerate-id'>function.session-regenerate-id</a>]: Cannot regenerate session id - headers already sent (Z:\home\localhost\www\web_test\framework\web\CHttpSession.php:181)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\auth\CWebUser.php(233): WebUser->changeIdentity()
+#1 Z:\home\localhost\www\web_test\protected\models\LoginForm.php(74): WebUser->login()
+#2 Z:\home\localhost\www\web_test\protected\controllers\SiteController.php(127): LoginForm->login()
+#3 Z:\home\localhost\www\web_test\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 Z:\home\localhost\www\web_test\framework\web\CController.php(286): SiteController->runAction()
+#6 Z:\home\localhost\www\web_test\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): SiteController->run()
+#8 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=site/login
+in Z:\home\localhost\www\web_test\protected\models\LoginForm.php (74)
+in Z:\home\localhost\www\web_test\protected\controllers\SiteController.php (127)
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/22 11:01:37 [error] [php] session_regenerate_id() [<a href='function.session-regenerate-id'>function.session-regenerate-id</a>]: Cannot regenerate session id - headers already sent (Z:\home\localhost\www\web_test\framework\web\CHttpSession.php:181)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\auth\CWebUser.php(233): WebUser->changeIdentity()
+#1 Z:\home\localhost\www\web_test\protected\models\LoginForm.php(75): WebUser->login()
+#2 Z:\home\localhost\www\web_test\protected\controllers\SiteController.php(127): LoginForm->login()
+#3 Z:\home\localhost\www\web_test\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 Z:\home\localhost\www\web_test\framework\web\CController.php(286): SiteController->runAction()
+#6 Z:\home\localhost\www\web_test\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): SiteController->run()
+#8 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=site/login
+in Z:\home\localhost\www\web_test\protected\models\LoginForm.php (75)
+in Z:\home\localhost\www\web_test\protected\controllers\SiteController.php (127)
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/22 11:02:25 [error] [php] session_regenerate_id() [<a href='function.session-regenerate-id'>function.session-regenerate-id</a>]: Cannot regenerate session id - headers already sent (Z:\home\localhost\www\web_test\framework\web\CHttpSession.php:181)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\auth\CWebUser.php(233): WebUser->changeIdentity()
+#1 Z:\home\localhost\www\web_test\protected\models\LoginForm.php(75): WebUser->login()
+#2 Z:\home\localhost\www\web_test\protected\controllers\SiteController.php(127): LoginForm->login()
+#3 Z:\home\localhost\www\web_test\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 Z:\home\localhost\www\web_test\framework\web\CController.php(286): SiteController->runAction()
+#6 Z:\home\localhost\www\web_test\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): SiteController->run()
+#8 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=site/login
+in Z:\home\localhost\www\web_test\protected\models\LoginForm.php (75)
+in Z:\home\localhost\www\web_test\protected\controllers\SiteController.php (127)
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/22 11:09:28 [error] [php] session_regenerate_id() [<a href='function.session-regenerate-id'>function.session-regenerate-id</a>]: Cannot regenerate session id - headers already sent (Z:\home\localhost\www\web_test\framework\web\CHttpSession.php:181)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\auth\CWebUser.php(233): WebUser->changeIdentity()
+#1 Z:\home\localhost\www\web_test\protected\models\LoginForm.php(75): WebUser->login()
+#2 Z:\home\localhost\www\web_test\protected\controllers\SiteController.php(127): LoginForm->login()
+#3 Z:\home\localhost\www\web_test\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 Z:\home\localhost\www\web_test\framework\web\CController.php(286): SiteController->runAction()
+#6 Z:\home\localhost\www\web_test\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): SiteController->run()
+#8 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=site/login
+in Z:\home\localhost\www\web_test\protected\models\LoginForm.php (75)
+in Z:\home\localhost\www\web_test\protected\controllers\SiteController.php (127)
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/22 11:11:27 [error] [php] session_regenerate_id() [<a href='function.session-regenerate-id'>function.session-regenerate-id</a>]: Cannot regenerate session id - headers already sent (Z:\home\localhost\www\web_test\framework\web\CHttpSession.php:181)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\auth\CWebUser.php(233): WebUser->changeIdentity()
+#1 Z:\home\localhost\www\web_test\protected\models\LoginForm.php(75): WebUser->login()
+#2 Z:\home\localhost\www\web_test\protected\controllers\SiteController.php(127): LoginForm->login()
+#3 Z:\home\localhost\www\web_test\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 Z:\home\localhost\www\web_test\framework\web\CController.php(286): SiteController->runAction()
+#6 Z:\home\localhost\www\web_test\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): SiteController->run()
+#8 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=site/login
+in Z:\home\localhost\www\web_test\protected\models\LoginForm.php (75)
+in Z:\home\localhost\www\web_test\protected\controllers\SiteController.php (127)
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/22 11:14:58 [error] [php] session_regenerate_id() [<a href='function.session-regenerate-id'>function.session-regenerate-id</a>]: Cannot regenerate session id - headers already sent (Z:\home\localhost\www\web_test\framework\web\CHttpSession.php:181)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\auth\CWebUser.php(233): WebUser->changeIdentity()
+#1 Z:\home\localhost\www\web_test\protected\models\LoginForm.php(75): WebUser->login()
+#2 Z:\home\localhost\www\web_test\protected\controllers\SiteController.php(127): LoginForm->login()
+#3 Z:\home\localhost\www\web_test\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 Z:\home\localhost\www\web_test\framework\web\CController.php(286): SiteController->runAction()
+#6 Z:\home\localhost\www\web_test\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): SiteController->run()
+#8 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=site/login
+in Z:\home\localhost\www\web_test\protected\models\LoginForm.php (75)
+in Z:\home\localhost\www\web_test\protected\controllers\SiteController.php (127)
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/22 11:15:39 [error] [php] session_regenerate_id() [<a href='function.session-regenerate-id'>function.session-regenerate-id</a>]: Cannot regenerate session id - headers already sent (Z:\home\localhost\www\web_test\framework\web\CHttpSession.php:181)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\auth\CWebUser.php(233): WebUser->changeIdentity()
+#1 Z:\home\localhost\www\web_test\protected\models\LoginForm.php(75): WebUser->login()
+#2 Z:\home\localhost\www\web_test\protected\controllers\SiteController.php(127): LoginForm->login()
+#3 Z:\home\localhost\www\web_test\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 Z:\home\localhost\www\web_test\framework\web\CController.php(286): SiteController->runAction()
+#6 Z:\home\localhost\www\web_test\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): SiteController->run()
+#8 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=site/login
+in Z:\home\localhost\www\web_test\protected\models\LoginForm.php (75)
+in Z:\home\localhost\www\web_test\protected\controllers\SiteController.php (127)
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/22 11:21:12 [error] [php] session_regenerate_id() [<a href='function.session-regenerate-id'>function.session-regenerate-id</a>]: Cannot regenerate session id - headers already sent (Z:\home\localhost\www\web_test\framework\web\CHttpSession.php:181)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\auth\CWebUser.php(233): WebUser->changeIdentity()
+#1 Z:\home\localhost\www\web_test\protected\models\LoginForm.php(75): WebUser->login()
+#2 Z:\home\localhost\www\web_test\protected\controllers\SiteController.php(127): LoginForm->login()
+#3 Z:\home\localhost\www\web_test\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 Z:\home\localhost\www\web_test\framework\web\CController.php(286): SiteController->runAction()
+#6 Z:\home\localhost\www\web_test\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): SiteController->run()
+#8 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=site/login
+in Z:\home\localhost\www\web_test\protected\models\LoginForm.php (75)
+in Z:\home\localhost\www\web_test\protected\controllers\SiteController.php (127)
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/22 11:22:22 [error] [php] session_regenerate_id() [<a href='function.session-regenerate-id'>function.session-regenerate-id</a>]: Cannot regenerate session id - headers already sent (Z:\home\localhost\www\web_test\framework\web\CHttpSession.php:181)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\auth\CWebUser.php(233): WebUser->changeIdentity()
+#1 Z:\home\localhost\www\web_test\protected\models\LoginForm.php(76): WebUser->login()
+#2 Z:\home\localhost\www\web_test\protected\controllers\SiteController.php(127): LoginForm->login()
+#3 Z:\home\localhost\www\web_test\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 Z:\home\localhost\www\web_test\framework\web\CController.php(286): SiteController->runAction()
+#6 Z:\home\localhost\www\web_test\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): SiteController->run()
+#8 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=site/login
+in Z:\home\localhost\www\web_test\protected\models\LoginForm.php (76)
+in Z:\home\localhost\www\web_test\protected\controllers\SiteController.php (127)
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/22 11:22:34 [error] [php] session_regenerate_id() [<a href='function.session-regenerate-id'>function.session-regenerate-id</a>]: Cannot regenerate session id - headers already sent (Z:\home\localhost\www\web_test\framework\web\CHttpSession.php:181)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\auth\CWebUser.php(233): WebUser->changeIdentity()
+#1 Z:\home\localhost\www\web_test\protected\models\LoginForm.php(76): WebUser->login()
+#2 Z:\home\localhost\www\web_test\protected\controllers\SiteController.php(127): LoginForm->login()
+#3 Z:\home\localhost\www\web_test\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 Z:\home\localhost\www\web_test\framework\web\CController.php(286): SiteController->runAction()
+#6 Z:\home\localhost\www\web_test\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): SiteController->run()
+#8 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=site/login
+in Z:\home\localhost\www\web_test\protected\models\LoginForm.php (76)
+in Z:\home\localhost\www\web_test\protected\controllers\SiteController.php (127)
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/22 11:24:14 [error] [php] session_regenerate_id() [<a href='function.session-regenerate-id'>function.session-regenerate-id</a>]: Cannot regenerate session id - headers already sent (Z:\home\localhost\www\web_test\framework\web\CHttpSession.php:181)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\auth\CWebUser.php(233): WebUser->changeIdentity()
+#1 Z:\home\localhost\www\web_test\protected\models\LoginForm.php(76): WebUser->login()
+#2 Z:\home\localhost\www\web_test\protected\controllers\SiteController.php(127): LoginForm->login()
+#3 Z:\home\localhost\www\web_test\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 Z:\home\localhost\www\web_test\framework\web\CController.php(286): SiteController->runAction()
+#6 Z:\home\localhost\www\web_test\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): SiteController->run()
+#8 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=site/login
+in Z:\home\localhost\www\web_test\protected\models\LoginForm.php (76)
+in Z:\home\localhost\www\web_test\protected\controllers\SiteController.php (127)
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/22 11:31:24 [error] [php] Cannot modify header information - headers already sent by (output started at Z:\home\localhost\www\web_test\protected\models\LoginForm.php:1) (Z:\home\localhost\www\web_test\framework\web\CHttpRequest.php:803)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\protected\controllers\SiteController.php(131): SiteController->redirect()
+#1 Z:\home\localhost\www\web_test\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#2 Z:\home\localhost\www\web_test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 Z:\home\localhost\www\web_test\framework\web\CController.php(286): SiteController->runAction()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#5 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): SiteController->run()
+#6 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=site/login
+in Z:\home\localhost\www\web_test\protected\controllers\SiteController.php (131)
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/22 11:58:25 [error] [php] session_regenerate_id() [<a href='function.session-regenerate-id'>function.session-regenerate-id</a>]: Cannot regenerate session id - headers already sent (Z:\home\localhost\www\web_test\framework\web\CHttpSession.php:181)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\auth\CWebUser.php(233): WebUser->changeIdentity()
+#1 Z:\home\localhost\www\web_test\protected\models\LoginForm.php(76): WebUser->login()
+#2 Z:\home\localhost\www\web_test\protected\controllers\SiteController.php(127): LoginForm->login()
+#3 Z:\home\localhost\www\web_test\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 Z:\home\localhost\www\web_test\framework\web\CController.php(286): SiteController->runAction()
+#6 Z:\home\localhost\www\web_test\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): SiteController->run()
+#8 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=site/login
+in Z:\home\localhost\www\web_test\protected\models\LoginForm.php (76)
+in Z:\home\localhost\www\web_test\protected\controllers\SiteController.php (127)
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/22 12:06:12 [error] [php] session_regenerate_id() [<a href='function.session-regenerate-id'>function.session-regenerate-id</a>]: Cannot regenerate session id - headers already sent (Z:\home\localhost\www\web_test\framework\web\CHttpSession.php:181)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\auth\CWebUser.php(233): WebUser->changeIdentity()
+#1 Z:\home\localhost\www\web_test\protected\models\LoginForm.php(76): WebUser->login()
+#2 Z:\home\localhost\www\web_test\protected\controllers\SiteController.php(104): LoginForm->login()
+#3 Z:\home\localhost\www\web_test\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 Z:\home\localhost\www\web_test\framework\web\CController.php(286): SiteController->runAction()
+#6 Z:\home\localhost\www\web_test\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): SiteController->run()
+#8 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=site/login
+in Z:\home\localhost\www\web_test\protected\models\LoginForm.php (76)
+in Z:\home\localhost\www\web_test\protected\controllers\SiteController.php (104)
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/22 12:07:14 [error] [php] session_regenerate_id() [<a href='function.session-regenerate-id'>function.session-regenerate-id</a>]: Cannot regenerate session id - headers already sent (Z:\home\localhost\www\web_test\framework\web\CHttpSession.php:181)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\auth\CWebUser.php(233): WebUser->changeIdentity()
+#1 Z:\home\localhost\www\web_test\protected\models\LoginForm.php(76): WebUser->login()
+#2 Z:\home\localhost\www\web_test\protected\controllers\SiteController.php(127): LoginForm->login()
+#3 Z:\home\localhost\www\web_test\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 Z:\home\localhost\www\web_test\framework\web\CController.php(286): SiteController->runAction()
+#6 Z:\home\localhost\www\web_test\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): SiteController->run()
+#8 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=site/login
+in Z:\home\localhost\www\web_test\protected\models\LoginForm.php (76)
+in Z:\home\localhost\www\web_test\protected\controllers\SiteController.php (127)
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/22 12:08:12 [error] [php] Cannot modify header information - headers already sent by (output started at Z:\home\localhost\www\web_test\protected\models\LoginForm.php:1) (Z:\home\localhost\www\web_test\framework\web\CHttpRequest.php:803)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\CController.php(1043): SiteController->redirect()
+#1 Z:\home\localhost\www\web_test\protected\controllers\SiteController.php(130): SiteController->refresh()
+#2 Z:\home\localhost\www\web_test\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#3 Z:\home\localhost\www\web_test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(286): SiteController->runAction()
+#5 Z:\home\localhost\www\web_test\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#6 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): SiteController->run()
+#7 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=site/login
+in Z:\home\localhost\www\web_test\protected\controllers\SiteController.php (130)
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/22 12:08:28 [error] [php] session_regenerate_id() [<a href='function.session-regenerate-id'>function.session-regenerate-id</a>]: Cannot regenerate session id - headers already sent (Z:\home\localhost\www\web_test\framework\web\CHttpSession.php:181)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\auth\CWebUser.php(233): WebUser->changeIdentity()
+#1 Z:\home\localhost\www\web_test\protected\models\LoginForm.php(75): WebUser->login()
+#2 Z:\home\localhost\www\web_test\protected\controllers\SiteController.php(127): LoginForm->login()
+#3 Z:\home\localhost\www\web_test\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 Z:\home\localhost\www\web_test\framework\web\CController.php(286): SiteController->runAction()
+#6 Z:\home\localhost\www\web_test\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): SiteController->run()
+#8 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=site/login
+in Z:\home\localhost\www\web_test\protected\models\LoginForm.php (75)
+in Z:\home\localhost\www\web_test\protected\controllers\SiteController.php (127)
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/22 12:09:58 [error] [php] session_regenerate_id() [<a href='function.session-regenerate-id'>function.session-regenerate-id</a>]: Cannot regenerate session id - headers already sent (Z:\home\localhost\www\web_test\framework\web\CHttpSession.php:181)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\auth\CWebUser.php(233): WebUser->changeIdentity()
+#1 Z:\home\localhost\www\web_test\protected\models\LoginForm.php(76): WebUser->login()
+#2 Z:\home\localhost\www\web_test\protected\controllers\SiteController.php(127): LoginForm->login()
+#3 Z:\home\localhost\www\web_test\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 Z:\home\localhost\www\web_test\framework\web\CController.php(286): SiteController->runAction()
+#6 Z:\home\localhost\www\web_test\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): SiteController->run()
+#8 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=site/login
+in Z:\home\localhost\www\web_test\protected\models\LoginForm.php (76)
+in Z:\home\localhost\www\web_test\protected\controllers\SiteController.php (127)
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/22 12:12:53 [error] [php] session_regenerate_id() [<a href='function.session-regenerate-id'>function.session-regenerate-id</a>]: Cannot regenerate session id - headers already sent (Z:\home\localhost\www\web_test\framework\web\CHttpSession.php:181)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\auth\CWebUser.php(233): WebUser->changeIdentity()
+#1 Z:\home\localhost\www\web_test\protected\models\LoginForm.php(76): WebUser->login()
+#2 Z:\home\localhost\www\web_test\protected\controllers\SiteController.php(127): LoginForm->login()
+#3 Z:\home\localhost\www\web_test\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 Z:\home\localhost\www\web_test\framework\web\CController.php(286): SiteController->runAction()
+#6 Z:\home\localhost\www\web_test\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): SiteController->run()
+#8 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=site/login
+in Z:\home\localhost\www\web_test\protected\models\LoginForm.php (76)
+in Z:\home\localhost\www\web_test\protected\controllers\SiteController.php (127)
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/22 12:15:46 [error] [php] session_regenerate_id() [<a href='function.session-regenerate-id'>function.session-regenerate-id</a>]: Cannot regenerate session id - headers already sent (Z:\home\localhost\www\web_test\framework\web\CHttpSession.php:181)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\auth\CWebUser.php(233): WebUser->changeIdentity()
+#1 Z:\home\localhost\www\web_test\protected\models\LoginForm.php(76): WebUser->login()
+#2 Z:\home\localhost\www\web_test\protected\controllers\SiteController.php(127): LoginForm->login()
+#3 Z:\home\localhost\www\web_test\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 Z:\home\localhost\www\web_test\framework\web\CController.php(286): SiteController->runAction()
+#6 Z:\home\localhost\www\web_test\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): SiteController->run()
+#8 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=site/login
+in Z:\home\localhost\www\web_test\protected\models\LoginForm.php (76)
+in Z:\home\localhost\www\web_test\protected\controllers\SiteController.php (127)
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/22 12:18:05 [error] [php] session_regenerate_id() [<a href='function.session-regenerate-id'>function.session-regenerate-id</a>]: Cannot regenerate session id - headers already sent (Z:\home\localhost\www\web_test\framework\web\CHttpSession.php:181)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\auth\CWebUser.php(233): WebUser->changeIdentity()
+#1 Z:\home\localhost\www\web_test\protected\models\LoginForm.php(76): WebUser->login()
+#2 Z:\home\localhost\www\web_test\protected\controllers\SiteController.php(126): LoginForm->login()
+#3 Z:\home\localhost\www\web_test\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 Z:\home\localhost\www\web_test\framework\web\CController.php(286): SiteController->runAction()
+#6 Z:\home\localhost\www\web_test\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): SiteController->run()
+#8 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=site/login
+in Z:\home\localhost\www\web_test\protected\models\LoginForm.php (76)
+in Z:\home\localhost\www\web_test\protected\controllers\SiteController.php (126)
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/22 12:18:10 [error] [php] session_regenerate_id() [<a href='function.session-regenerate-id'>function.session-regenerate-id</a>]: Cannot regenerate session id - headers already sent (Z:\home\localhost\www\web_test\framework\web\CHttpSession.php:181)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\auth\CWebUser.php(233): WebUser->changeIdentity()
+#1 Z:\home\localhost\www\web_test\protected\models\LoginForm.php(76): WebUser->login()
+#2 Z:\home\localhost\www\web_test\protected\controllers\SiteController.php(126): LoginForm->login()
+#3 Z:\home\localhost\www\web_test\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 Z:\home\localhost\www\web_test\framework\web\CController.php(286): SiteController->runAction()
+#6 Z:\home\localhost\www\web_test\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): SiteController->run()
+#8 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=site/login
+in Z:\home\localhost\www\web_test\protected\models\LoginForm.php (76)
+in Z:\home\localhost\www\web_test\protected\controllers\SiteController.php (126)
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/22 12:30:51 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "TbMenu.visible".' in Z:\home\localhost\www\web_test\framework\base\CComponent.php:173
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\CWidgetFactory.php(161): CComponent->__set('visible', false)
+#1 Z:\home\localhost\www\web_test\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(User_personalController), 'bootstrap.widge...', Array)
+#2 Z:\home\localhost\www\web_test\framework\web\CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#3 Z:\home\localhost\www\web_test\themes\bootstrap\views\layouts\column3.php(27): CBaseController->widget('bootstrap.widge...', Array)
+#4 Z:\home\localhost\www\web_test\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#5 Z:\home\localhost\www\web_test\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#6 Z:\home\localhost\www\web_test\framework\web\CController.php(784): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#7 Z:\home\localhost\www\web_test\protected\controllers\User_personalController.php(14): CController->render('index', Array)
+#8 [internal function]: User_personalController->actionIndex('5')
+#9 Z:\home\localhost\www\web_test\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(User_personalController), Array)
+#10 Z:\home\localhost\www\web_test\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(User_personalController), Object(ReflectionMethod), Array)
+#11 Z:\home\localhost\www\web_test\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 Z:\home\localhost\www\web_test\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 Z:\home\localhost\www\web_test\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): CController->run('index')
+#15 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController('user_personal/i...')
+#16 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 Z:\home\localhost\www\web_test\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/web_test/index.php?r=user_personal/index&id=5
+HTTP_REFERER=http://localhost/web_test/index.php?r=page/index/id/1
+---
+2014/08/22 12:35:57 [error] [php] session_regenerate_id() [<a href='function.session-regenerate-id'>function.session-regenerate-id</a>]: Cannot regenerate session id - headers already sent (Z:\home\localhost\www\web_test\framework\web\CHttpSession.php:181)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\auth\CWebUser.php(233): WebUser->changeIdentity()
+#1 Z:\home\localhost\www\web_test\protected\models\LoginForm.php(76): WebUser->login()
+#2 Z:\home\localhost\www\web_test\protected\controllers\SiteController.php(127): LoginForm->login()
+#3 Z:\home\localhost\www\web_test\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 Z:\home\localhost\www\web_test\framework\web\CController.php(286): SiteController->runAction()
+#6 Z:\home\localhost\www\web_test\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): SiteController->run()
+#8 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=site/login
+in Z:\home\localhost\www\web_test\protected\models\LoginForm.php (76)
+in Z:\home\localhost\www\web_test\protected\controllers\SiteController.php (127)
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/22 14:15:27 [error] [php] session_regenerate_id() [<a href='function.session-regenerate-id'>function.session-regenerate-id</a>]: Cannot regenerate session id - headers already sent (Z:\home\localhost\www\web_test\framework\web\CHttpSession.php:181)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\auth\CWebUser.php(233): WebUser->changeIdentity()
+#1 Z:\home\localhost\www\web_test\protected\models\LoginForm.php(76): WebUser->login()
+#2 Z:\home\localhost\www\web_test\protected\controllers\SiteController.php(127): LoginForm->login()
+#3 Z:\home\localhost\www\web_test\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 Z:\home\localhost\www\web_test\framework\web\CController.php(286): SiteController->runAction()
+#6 Z:\home\localhost\www\web_test\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): SiteController->run()
+#8 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=site/login
+in Z:\home\localhost\www\web_test\protected\models\LoginForm.php (76)
+in Z:\home\localhost\www\web_test\protected\controllers\SiteController.php (127)
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/22 14:15:30 [error] [php] session_regenerate_id() [<a href='function.session-regenerate-id'>function.session-regenerate-id</a>]: Cannot regenerate session id - headers already sent (Z:\home\localhost\www\web_test\framework\web\CHttpSession.php:181)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\auth\CWebUser.php(233): WebUser->changeIdentity()
+#1 Z:\home\localhost\www\web_test\protected\models\LoginForm.php(76): WebUser->login()
+#2 Z:\home\localhost\www\web_test\protected\controllers\SiteController.php(127): LoginForm->login()
+#3 Z:\home\localhost\www\web_test\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 Z:\home\localhost\www\web_test\framework\web\CController.php(286): SiteController->runAction()
+#6 Z:\home\localhost\www\web_test\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): SiteController->run()
+#8 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=site/login
+in Z:\home\localhost\www\web_test\protected\models\LoginForm.php (76)
+in Z:\home\localhost\www\web_test\protected\controllers\SiteController.php (127)
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/22 14:15:40 [error] [php] session_regenerate_id() [<a href='function.session-regenerate-id'>function.session-regenerate-id</a>]: Cannot regenerate session id - headers already sent (Z:\home\localhost\www\web_test\framework\web\CHttpSession.php:181)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\auth\CWebUser.php(233): WebUser->changeIdentity()
+#1 Z:\home\localhost\www\web_test\protected\models\LoginForm.php(76): WebUser->login()
+#2 Z:\home\localhost\www\web_test\protected\controllers\SiteController.php(127): LoginForm->login()
+#3 Z:\home\localhost\www\web_test\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 Z:\home\localhost\www\web_test\framework\web\CController.php(286): SiteController->runAction()
+#6 Z:\home\localhost\www\web_test\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): SiteController->run()
+#8 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=site/login
+in Z:\home\localhost\www\web_test\protected\models\LoginForm.php (76)
+in Z:\home\localhost\www\web_test\protected\controllers\SiteController.php (127)
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/22 14:22:39 [error] [php] session_regenerate_id() [<a href='function.session-regenerate-id'>function.session-regenerate-id</a>]: Cannot regenerate session id - headers already sent (Z:\home\localhost\www\web_test\framework\web\CHttpSession.php:181)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\auth\CWebUser.php(233): WebUser->changeIdentity()
+#1 Z:\home\localhost\www\web_test\protected\models\LoginForm.php(76): WebUser->login()
+#2 Z:\home\localhost\www\web_test\protected\controllers\SiteController.php(127): LoginForm->login()
+#3 Z:\home\localhost\www\web_test\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 Z:\home\localhost\www\web_test\framework\web\CController.php(286): SiteController->runAction()
+#6 Z:\home\localhost\www\web_test\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): SiteController->run()
+#8 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=site/login
+in Z:\home\localhost\www\web_test\protected\models\LoginForm.php (76)
+in Z:\home\localhost\www\web_test\protected\controllers\SiteController.php (127)
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/22 14:23:36 [error] [php] session_regenerate_id() [<a href='function.session-regenerate-id'>function.session-regenerate-id</a>]: Cannot regenerate session id - headers already sent (Z:\home\localhost\www\web_test\framework\web\CHttpSession.php:181)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\auth\CWebUser.php(233): WebUser->changeIdentity()
+#1 Z:\home\localhost\www\web_test\protected\models\LoginForm.php(76): WebUser->login()
+#2 Z:\home\localhost\www\web_test\protected\controllers\SiteController.php(127): LoginForm->login()
+#3 Z:\home\localhost\www\web_test\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 Z:\home\localhost\www\web_test\framework\web\CController.php(286): SiteController->runAction()
+#6 Z:\home\localhost\www\web_test\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): SiteController->run()
+#8 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=site/login
+in Z:\home\localhost\www\web_test\protected\models\LoginForm.php (76)
+in Z:\home\localhost\www\web_test\protected\controllers\SiteController.php (127)
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/22 14:23:40 [error] [php] session_regenerate_id() [<a href='function.session-regenerate-id'>function.session-regenerate-id</a>]: Cannot regenerate session id - headers already sent (Z:\home\localhost\www\web_test\framework\web\CHttpSession.php:181)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\auth\CWebUser.php(233): WebUser->changeIdentity()
+#1 Z:\home\localhost\www\web_test\protected\models\LoginForm.php(76): WebUser->login()
+#2 Z:\home\localhost\www\web_test\protected\controllers\SiteController.php(127): LoginForm->login()
+#3 Z:\home\localhost\www\web_test\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 Z:\home\localhost\www\web_test\framework\web\CController.php(286): SiteController->runAction()
+#6 Z:\home\localhost\www\web_test\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): SiteController->run()
+#8 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=site/login
+in Z:\home\localhost\www\web_test\protected\models\LoginForm.php (76)
+in Z:\home\localhost\www\web_test\protected\controllers\SiteController.php (127)
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/22 14:24:18 [error] [php] session_regenerate_id() [<a href='function.session-regenerate-id'>function.session-regenerate-id</a>]: Cannot regenerate session id - headers already sent (Z:\home\localhost\www\web_test\framework\web\CHttpSession.php:181)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\auth\CWebUser.php(233): WebUser->changeIdentity()
+#1 Z:\home\localhost\www\web_test\protected\models\LoginForm.php(76): WebUser->login()
+#2 Z:\home\localhost\www\web_test\protected\controllers\SiteController.php(127): LoginForm->login()
+#3 Z:\home\localhost\www\web_test\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 Z:\home\localhost\www\web_test\framework\web\CController.php(286): SiteController->runAction()
+#6 Z:\home\localhost\www\web_test\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): SiteController->run()
+#8 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=site/login
+in Z:\home\localhost\www\web_test\protected\models\LoginForm.php (76)
+in Z:\home\localhost\www\web_test\protected\controllers\SiteController.php (127)
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/22 14:24:24 [error] [php] session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at Z:\home\localhost\www\web_test\protected\models\LoginForm.php:1) (Z:\home\localhost\www\web_test\themes\bootstrap\views\site\login.php:10)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#1 Z:\home\localhost\www\web_test\framework\web\CController.php(869): SiteController->renderFile()
+#2 Z:\home\localhost\www\web_test\framework\web\CController.php(782): SiteController->renderPartial()
+#3 Z:\home\localhost\www\web_test\protected\controllers\SiteController.php(135): SiteController->render()
+#4 Z:\home\localhost\www\web_test\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#5 Z:\home\localhost\www\web_test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 Z:\home\localhost\www\web_test\framework\web\CController.php(286): SiteController->runAction()
+#7 Z:\home\localhost\www\web_test\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#8 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): SiteController->run()
+#9 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=site/login
+in Z:\home\localhost\www\web_test\themes\bootstrap\views\site\login.php (10)
+in Z:\home\localhost\www\web_test\protected\controllers\SiteController.php (135)
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/22 14:26:54 [error] [php] session_regenerate_id() [<a href='function.session-regenerate-id'>function.session-regenerate-id</a>]: Cannot regenerate session id - headers already sent (Z:\home\localhost\www\web_test\framework\web\CHttpSession.php:181)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\auth\CWebUser.php(233): WebUser->changeIdentity()
+#1 Z:\home\localhost\www\web_test\protected\models\LoginForm.php(76): WebUser->login()
+#2 Z:\home\localhost\www\web_test\protected\controllers\SiteController.php(127): LoginForm->login()
+#3 Z:\home\localhost\www\web_test\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 Z:\home\localhost\www\web_test\framework\web\CController.php(286): SiteController->runAction()
+#6 Z:\home\localhost\www\web_test\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): SiteController->run()
+#8 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=site/login
+in Z:\home\localhost\www\web_test\protected\models\LoginForm.php (76)
+in Z:\home\localhost\www\web_test\protected\controllers\SiteController.php (127)
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/22 14:26:59 [error] [php] session_regenerate_id() [<a href='function.session-regenerate-id'>function.session-regenerate-id</a>]: Cannot regenerate session id - headers already sent (Z:\home\localhost\www\web_test\framework\web\CHttpSession.php:181)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\auth\CWebUser.php(233): WebUser->changeIdentity()
+#1 Z:\home\localhost\www\web_test\protected\models\LoginForm.php(76): WebUser->login()
+#2 Z:\home\localhost\www\web_test\protected\controllers\SiteController.php(127): LoginForm->login()
+#3 Z:\home\localhost\www\web_test\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 Z:\home\localhost\www\web_test\framework\web\CController.php(286): SiteController->runAction()
+#6 Z:\home\localhost\www\web_test\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): SiteController->run()
+#8 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=site/login
+in Z:\home\localhost\www\web_test\protected\models\LoginForm.php (76)
+in Z:\home\localhost\www\web_test\protected\controllers\SiteController.php (127)
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/22 14:27:03 [error] [php] session_regenerate_id() [<a href='function.session-regenerate-id'>function.session-regenerate-id</a>]: Cannot regenerate session id - headers already sent (Z:\home\localhost\www\web_test\framework\web\CHttpSession.php:181)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\auth\CWebUser.php(233): WebUser->changeIdentity()
+#1 Z:\home\localhost\www\web_test\protected\models\LoginForm.php(76): WebUser->login()
+#2 Z:\home\localhost\www\web_test\protected\controllers\SiteController.php(127): LoginForm->login()
+#3 Z:\home\localhost\www\web_test\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 Z:\home\localhost\www\web_test\framework\web\CController.php(286): SiteController->runAction()
+#6 Z:\home\localhost\www\web_test\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): SiteController->run()
+#8 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=site/login
+in Z:\home\localhost\www\web_test\protected\models\LoginForm.php (76)
+in Z:\home\localhost\www\web_test\protected\controllers\SiteController.php (127)
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/22 15:53:09 [error] [php] session_regenerate_id() [<a href='function.session-regenerate-id'>function.session-regenerate-id</a>]: Cannot regenerate session id - headers already sent (Z:\home\localhost\www\web_test\framework\web\CHttpSession.php:181)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\auth\CWebUser.php(233): WebUser->changeIdentity()
+#1 Z:\home\localhost\www\web_test\protected\models\LoginForm.php(76): WebUser->login()
+#2 Z:\home\localhost\www\web_test\protected\controllers\SiteController.php(127): LoginForm->login()
+#3 Z:\home\localhost\www\web_test\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 Z:\home\localhost\www\web_test\framework\web\CController.php(286): SiteController->runAction()
+#6 Z:\home\localhost\www\web_test\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): SiteController->run()
+#8 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=site/login
+in Z:\home\localhost\www\web_test\protected\models\LoginForm.php (76)
+in Z:\home\localhost\www\web_test\protected\controllers\SiteController.php (127)
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/22 15:58:00 [error] [php] session_regenerate_id() [<a href='function.session-regenerate-id'>function.session-regenerate-id</a>]: Cannot regenerate session id - headers already sent (Z:\home\localhost\www\web_test\framework\web\CHttpSession.php:181)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\auth\CWebUser.php(233): WebUser->changeIdentity()
+#1 Z:\home\localhost\www\web_test\protected\models\LoginForm.php(76): WebUser->login()
+#2 Z:\home\localhost\www\web_test\protected\controllers\SiteController.php(127): LoginForm->login()
+#3 Z:\home\localhost\www\web_test\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 Z:\home\localhost\www\web_test\framework\web\CController.php(286): SiteController->runAction()
+#6 Z:\home\localhost\www\web_test\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): SiteController->run()
+#8 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=site/login
+in Z:\home\localhost\www\web_test\protected\models\LoginForm.php (76)
+in Z:\home\localhost\www\web_test\protected\controllers\SiteController.php (127)
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/22 16:03:14 [error] [php] include(User.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (Z:\home\localhost\www\web_test\framework\YiiBase.php:427)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\protected\components\UserIdentity.php(9): spl_autoload_call()
+#1 Z:\home\localhost\www\web_test\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#2 Z:\home\localhost\www\web_test\framework\validators\CInlineValidator.php(42): LoginForm->authenticate()
+#3 Z:\home\localhost\www\web_test\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute()
+#4 Z:\home\localhost\www\web_test\framework\base\CModel.php(159): CInlineValidator->validate()
+#5 Z:\home\localhost\www\web_test\protected\controllers\SiteController.php(127): LoginForm->validate()
+#6 Z:\home\localhost\www\web_test\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 Z:\home\localhost\www\web_test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 Z:\home\localhost\www\web_test\framework\web\CController.php(286): SiteController->runAction()
+#9 Z:\home\localhost\www\web_test\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#10 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): SiteController->run()
+#11 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=site/login
+in Z:\home\localhost\www\web_test\protected\components\UserIdentity.php (9)
+in Z:\home\localhost\www\web_test\protected\models\LoginForm.php (52)
+in Z:\home\localhost\www\web_test\protected\controllers\SiteController.php (127)
+2014/08/23 11:54:28 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'У вас недостаточно прав для выполнения указанного действия.' in Z:\home\localhost\www\web_test\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), '?? ?????? ?????...')
+#1 Z:\home\localhost\www\web_test\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\home\localhost\www\web_test\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 Z:\home\localhost\www\web_test\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\home\localhost\www\web_test\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\home\localhost\www\web_test\framework\web\CController.php(291): CFilterChain->run()
+#6 Z:\home\localhost\www\web_test\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): CController->run('index')
+#8 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/CmsPage/i...')
+#9 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\web_test\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/web_test/index.php?r=admin/CmsPage/index
+---
+2014/08/23 11:54:47 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'У вас недостаточно прав для выполнения указанного действия.' in Z:\home\localhost\www\web_test\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), '?? ?????? ?????...')
+#1 Z:\home\localhost\www\web_test\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\home\localhost\www\web_test\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 Z:\home\localhost\www\web_test\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\home\localhost\www\web_test\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\home\localhost\www\web_test\framework\web\CController.php(291): CFilterChain->run()
+#6 Z:\home\localhost\www\web_test\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): CController->run('index')
+#8 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/CmsPage/i...')
+#9 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\web_test\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/web_test/index.php?r=admin/CmsPage/index
+---
+2014/08/23 11:55:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "admin/CmsComments/index".' in Z:\home\localhost\www\web_test\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/CmsCommen...')
+#1 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\web_test\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/web_test/index.php?r=admin/CmsComments/index
+---
+2014/08/23 12:01:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'У вас недостаточно прав для выполнения указанного действия.' in Z:\home\localhost\www\web_test\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), '?? ?????? ?????...')
+#1 Z:\home\localhost\www\web_test\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\home\localhost\www\web_test\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 Z:\home\localhost\www\web_test\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\home\localhost\www\web_test\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\home\localhost\www\web_test\framework\web\CController.php(291): CFilterChain->run()
+#6 Z:\home\localhost\www\web_test\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): CController->run('index')
+#8 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/CmsPage/i...')
+#9 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\web_test\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/web_test/index.php?r=admin/CmsPage/index
+---
+2014/08/23 12:14:59 [error] [php] strtolower() expects parameter 1 to be string, array given (Z:\home\localhost\www\web_test\framework\web\auth\CAccessControlFilter.php:115)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\CController.php(1144): CAccessControlFilter->setRules()
+#1 Z:\home\localhost\www\web_test\framework\web\filters\CInlineFilter.php(58): CmsCommentController->filterAccessControl()
+#2 Z:\home\localhost\www\web_test\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#3 Z:\home\localhost\www\web_test\framework\web\CController.php(291): CFilterChain->run()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(265): CmsCommentController->runActionWithFilters()
+#5 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): CmsCommentController->run()
+#6 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=admin/CmsComment/index
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/23 12:15:11 [error] [php] strtolower() expects parameter 1 to be string, array given (Z:\home\localhost\www\web_test\framework\web\auth\CAccessControlFilter.php:115)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\CController.php(1144): CAccessControlFilter->setRules()
+#1 Z:\home\localhost\www\web_test\framework\web\filters\CInlineFilter.php(58): CmsCommentController->filterAccessControl()
+#2 Z:\home\localhost\www\web_test\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#3 Z:\home\localhost\www\web_test\framework\web\CController.php(291): CFilterChain->run()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(265): CmsCommentController->runActionWithFilters()
+#5 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): CmsCommentController->run()
+#6 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=admin/CmsComment/index
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/23 12:16:21 [error] [php] strtolower() expects parameter 1 to be string, array given (Z:\home\localhost\www\web_test\framework\web\auth\CAccessControlFilter.php:115)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\CController.php(1144): CAccessControlFilter->setRules()
+#1 Z:\home\localhost\www\web_test\framework\web\filters\CInlineFilter.php(58): CmsCommentController->filterAccessControl()
+#2 Z:\home\localhost\www\web_test\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#3 Z:\home\localhost\www\web_test\framework\web\CController.php(291): CFilterChain->run()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(265): CmsCommentController->runActionWithFilters()
+#5 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): CmsCommentController->run()
+#6 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=admin/CmsComment/index
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/23 12:16:22 [error] [php] strtolower() expects parameter 1 to be string, array given (Z:\home\localhost\www\web_test\framework\web\auth\CAccessControlFilter.php:115)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\CController.php(1144): CAccessControlFilter->setRules()
+#1 Z:\home\localhost\www\web_test\framework\web\filters\CInlineFilter.php(58): CmsCommentController->filterAccessControl()
+#2 Z:\home\localhost\www\web_test\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#3 Z:\home\localhost\www\web_test\framework\web\CController.php(291): CFilterChain->run()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(265): CmsCommentController->runActionWithFilters()
+#5 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): CmsCommentController->run()
+#6 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=admin/CmsComment/index
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/23 12:16:42 [error] [php] strtolower() expects parameter 1 to be string, array given (Z:\home\localhost\www\web_test\framework\web\auth\CAccessControlFilter.php:115)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\CController.php(1144): CAccessControlFilter->setRules()
+#1 Z:\home\localhost\www\web_test\framework\web\filters\CInlineFilter.php(58): CmsCommentController->filterAccessControl()
+#2 Z:\home\localhost\www\web_test\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#3 Z:\home\localhost\www\web_test\framework\web\CController.php(291): CFilterChain->run()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(265): CmsCommentController->runActionWithFilters()
+#5 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): CmsCommentController->run()
+#6 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=admin/CmsComment/index
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/23 12:16:42 [error] [php] strtolower() expects parameter 1 to be string, array given (Z:\home\localhost\www\web_test\framework\web\auth\CAccessControlFilter.php:115)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\CController.php(1144): CAccessControlFilter->setRules()
+#1 Z:\home\localhost\www\web_test\framework\web\filters\CInlineFilter.php(58): CmsCommentController->filterAccessControl()
+#2 Z:\home\localhost\www\web_test\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#3 Z:\home\localhost\www\web_test\framework\web\CController.php(291): CFilterChain->run()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(265): CmsCommentController->runActionWithFilters()
+#5 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): CmsCommentController->run()
+#6 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=admin/CmsComment/index
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/23 12:16:43 [error] [php] strtolower() expects parameter 1 to be string, array given (Z:\home\localhost\www\web_test\framework\web\auth\CAccessControlFilter.php:115)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\CController.php(1144): CAccessControlFilter->setRules()
+#1 Z:\home\localhost\www\web_test\framework\web\filters\CInlineFilter.php(58): CmsCommentController->filterAccessControl()
+#2 Z:\home\localhost\www\web_test\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#3 Z:\home\localhost\www\web_test\framework\web\CController.php(291): CFilterChain->run()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(265): CmsCommentController->runActionWithFilters()
+#5 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): CmsCommentController->run()
+#6 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=admin/CmsComment/index
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/23 12:16:43 [error] [php] strtolower() expects parameter 1 to be string, array given (Z:\home\localhost\www\web_test\framework\web\auth\CAccessControlFilter.php:115)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\CController.php(1144): CAccessControlFilter->setRules()
+#1 Z:\home\localhost\www\web_test\framework\web\filters\CInlineFilter.php(58): CmsCommentController->filterAccessControl()
+#2 Z:\home\localhost\www\web_test\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#3 Z:\home\localhost\www\web_test\framework\web\CController.php(291): CFilterChain->run()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(265): CmsCommentController->runActionWithFilters()
+#5 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): CmsCommentController->run()
+#6 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=admin/CmsComment/index
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/23 12:16:43 [error] [php] strtolower() expects parameter 1 to be string, array given (Z:\home\localhost\www\web_test\framework\web\auth\CAccessControlFilter.php:115)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\CController.php(1144): CAccessControlFilter->setRules()
+#1 Z:\home\localhost\www\web_test\framework\web\filters\CInlineFilter.php(58): CmsCommentController->filterAccessControl()
+#2 Z:\home\localhost\www\web_test\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#3 Z:\home\localhost\www\web_test\framework\web\CController.php(291): CFilterChain->run()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(265): CmsCommentController->runActionWithFilters()
+#5 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): CmsCommentController->run()
+#6 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=admin/CmsComment/index
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/23 12:16:43 [error] [php] strtolower() expects parameter 1 to be string, array given (Z:\home\localhost\www\web_test\framework\web\auth\CAccessControlFilter.php:115)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\CController.php(1144): CAccessControlFilter->setRules()
+#1 Z:\home\localhost\www\web_test\framework\web\filters\CInlineFilter.php(58): CmsCommentController->filterAccessControl()
+#2 Z:\home\localhost\www\web_test\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#3 Z:\home\localhost\www\web_test\framework\web\CController.php(291): CFilterChain->run()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(265): CmsCommentController->runActionWithFilters()
+#5 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): CmsCommentController->run()
+#6 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=admin/CmsComment/index
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/23 12:17:51 [error] [php] strtolower() expects parameter 1 to be string, array given (Z:\home\localhost\www\web_test\framework\web\auth\CAccessControlFilter.php:115)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\CController.php(1144): CAccessControlFilter->setRules()
+#1 Z:\home\localhost\www\web_test\framework\web\filters\CInlineFilter.php(58): CmsCommentController->filterAccessControl()
+#2 Z:\home\localhost\www\web_test\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#3 Z:\home\localhost\www\web_test\framework\web\CController.php(291): CFilterChain->run()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(265): CmsCommentController->runActionWithFilters()
+#5 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): CmsCommentController->run()
+#6 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=admin/CmsComment/index
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/23 12:17:52 [error] [php] strtolower() expects parameter 1 to be string, array given (Z:\home\localhost\www\web_test\framework\web\auth\CAccessControlFilter.php:115)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\CController.php(1144): CAccessControlFilter->setRules()
+#1 Z:\home\localhost\www\web_test\framework\web\filters\CInlineFilter.php(58): CmsCommentController->filterAccessControl()
+#2 Z:\home\localhost\www\web_test\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#3 Z:\home\localhost\www\web_test\framework\web\CController.php(291): CFilterChain->run()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(265): CmsCommentController->runActionWithFilters()
+#5 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): CmsCommentController->run()
+#6 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=admin/CmsComment/index
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/23 12:18:55 [error] [php] strtolower() expects parameter 1 to be string, array given (Z:\home\localhost\www\web_test\framework\web\auth\CAccessControlFilter.php:115)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\CController.php(1144): CAccessControlFilter->setRules()
+#1 Z:\home\localhost\www\web_test\framework\web\filters\CInlineFilter.php(58): CmsCommentController->filterAccessControl()
+#2 Z:\home\localhost\www\web_test\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#3 Z:\home\localhost\www\web_test\framework\web\CController.php(291): CFilterChain->run()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(265): CmsCommentController->runActionWithFilters()
+#5 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): CmsCommentController->run()
+#6 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=admin/CmsComment/index
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/24 10:15:12 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'У вас недостаточно прав для выполнения указанного действия.' in Z:\home\localhost\www\web_test\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), '?? ?????? ?????...')
+#1 Z:\home\localhost\www\web_test\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\home\localhost\www\web_test\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 Z:\home\localhost\www\web_test\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\home\localhost\www\web_test\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\home\localhost\www\web_test\framework\web\CController.php(291): CFilterChain->run()
+#6 Z:\home\localhost\www\web_test\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): CController->run('index')
+#8 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/CmsCommen...')
+#9 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\web_test\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/web_test/index.php?r=admin/CmsComment/index
+HTTP_REFERER=http://localhost/web_test/index.php?r=admin/CmsUser/index
+---
+2014/08/24 10:15:16 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'У вас недостаточно прав для выполнения указанного действия.' in Z:\home\localhost\www\web_test\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), '?? ?????? ?????...')
+#1 Z:\home\localhost\www\web_test\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\home\localhost\www\web_test\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 Z:\home\localhost\www\web_test\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\home\localhost\www\web_test\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\home\localhost\www\web_test\framework\web\CController.php(291): CFilterChain->run()
+#6 Z:\home\localhost\www\web_test\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): CController->run('index')
+#8 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/CmsCommen...')
+#9 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\web_test\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/web_test/index.php?r=admin/CmsComment/index
+HTTP_REFERER=http://localhost/web_test/index.php?r=admin/CmsUser/index
+---
+2014/08/26 09:57:37 [warning] [application] Не удалось присвоить небезопасный атрибут "image" класса "CmsUser".
+in Z:\home\localhost\www\web_test\protected\controllers\User_personalController.php (27)
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/26 09:58:52 [warning] [application] Не удалось присвоить небезопасный атрибут "image" класса "CmsPage".
+in Z:\home\localhost\www\web_test\protected\controllers\User_personalController.php (164)
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/26 10:04:11 [warning] [application] Не удалось присвоить небезопасный атрибут "image" класса "CmsPage".
+in Z:\home\localhost\www\web_test\protected\controllers\User_personalController.php (164)
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/26 10:04:54 [warning] [application] Не удалось присвоить небезопасный атрибут "image" класса "CmsPage".
+in Z:\home\localhost\www\web_test\protected\controllers\User_personalController.php (164)
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/26 10:06:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "change".' in Z:\home\localhost\www\web_test\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\CController.php(270): CController->missingAction('change')
+#1 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): CController->run('change')
+#2 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController('user_personal/c...')
+#3 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\web_test\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/web_test/index.php?r=user_personal/change&amp
+---
+2014/08/26 10:06:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "change".' in Z:\home\localhost\www\web_test\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\CController.php(270): CController->missingAction('change')
+#1 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): CController->run('change')
+#2 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController('user_personal/c...')
+#3 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\web_test\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/web_test/index.php?r=user_personal/change&id=5
+---
+2014/08/26 10:07:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "change".' in Z:\home\localhost\www\web_test\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\CController.php(270): CController->missingAction('change')
+#1 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): CController->run('change')
+#2 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController('user_personal/c...')
+#3 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\web_test\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/web_test/index.php?r=user_personal/change&id=5
+---
+2014/08/26 10:11:02 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in Z:\home\localhost\www\web_test\framework\web\CController.php:336
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 Z:\home\localhost\www\web_test\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 Z:\home\localhost\www\web_test\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): CController->run('Change_email')
+#4 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController('user_personal/C...')
+#5 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 Z:\home\localhost\www\web_test\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/web_test/index.php?r=user_personal/Change_email&amp
+---
+2014/08/26 10:12:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "change".' in Z:\home\localhost\www\web_test\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\CController.php(270): CController->missingAction('change')
+#1 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): CController->run('change')
+#2 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController('user_personal/c...')
+#3 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\web_test\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/web_test/index.php?r=user_personal/change&id=5&time=1409037090
+---
+2014/08/26 11:18:03 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "CDbCriteria.password".' in Z:\home\localhost\www\web_test\framework\base\CComponent.php:173
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\db\schema\CDbCriteria.php(160): CComponent->__set('password', 'admin')
+#1 Z:\home\localhost\www\web_test\framework\db\schema\CDbCommandBuilder.php(585): CDbCriteria->__construct(Array)
+#2 Z:\home\localhost\www\web_test\framework\db\schema\CDbCommandBuilder.php(661): CDbCommandBuilder->createCriteria(Array, Array)
+#3 Z:\home\localhost\www\web_test\framework\db\ar\CActiveRecord.php(1518): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Array, Array, Array, '`t`.')
+#4 Z:\home\localhost\www\web_test\protected\models\CmsUser.php(230): CActiveRecord->findByAttributes(Array, Array)
+#5 Z:\home\localhost\www\web_test\protected\controllers\SiteController.php(135): CmsUser::sendAvtor('admin_dima', 'admin')
+#6 Z:\home\localhost\www\web_test\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 Z:\home\localhost\www\web_test\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 Z:\home\localhost\www\web_test\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 Z:\home\localhost\www\web_test\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): CController->run('login')
+#11 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 Z:\home\localhost\www\web_test\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/web_test/index.php?r=site/login
+HTTP_REFERER=http://localhost/web_test/index.php?r=site/login
+---
+2014/08/26 11:34:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "loginArray".' in Z:\home\localhost\www\web_test\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\CController.php(270): CController->missingAction('loginArray')
+#1 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): CController->run('loginArray')
+#2 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController('site/loginArray')
+#3 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\web_test\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/web_test/index.php?r=site/loginArray
+HTTP_REFERER=http://localhost/web_test/index.php?r=site/login
+---
+2014/08/26 11:34:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "loginArray".' in Z:\home\localhost\www\web_test\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\CController.php(270): CController->missingAction('loginArray')
+#1 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): CController->run('loginArray')
+#2 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController('site/loginArray')
+#3 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\web_test\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/web_test/index.php?r=site/loginArray
+HTTP_REFERER=http://localhost/web_test/index.php?r=site/login
+---
+2014/08/26 11:35:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "loginArray".' in Z:\home\localhost\www\web_test\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\CController.php(270): CController->missingAction('loginArray')
+#1 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): CController->run('loginArray')
+#2 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController('site/loginArray')
+#3 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\web_test\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/web_test/index.php?r=site/loginArray
+HTTP_REFERER=http://localhost/web_test/index.php?r=site/login
+---
+2014/08/26 11:37:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "loginArray".' in Z:\home\localhost\www\web_test\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\CController.php(270): CController->missingAction('loginArray')
+#1 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): CController->run('loginArray')
+#2 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController('site/loginArray')
+#3 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\web_test\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/web_test/index.php?r=site/loginArray
+HTTP_REFERER=http://localhost/web_test/index.php?r=site/login
+---
+2014/08/26 11:38:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "loginArray".' in Z:\home\localhost\www\web_test\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\CController.php(270): CController->missingAction('loginArray')
+#1 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): CController->run('loginArray')
+#2 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController('site/loginArray')
+#3 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\web_test\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/web_test/index.php?r=site/loginArray
+HTTP_REFERER=http://localhost/web_test/index.php?r=site/login
+---
+2014/08/26 11:40:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "loginArray".' in Z:\home\localhost\www\web_test\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\CController.php(270): CController->missingAction('loginArray')
+#1 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): CController->run('loginArray')
+#2 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController('site/loginArray')
+#3 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\web_test\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/web_test/index.php?r=site/loginArray
+HTTP_REFERER=http://localhost/web_test/index.php?r=site/login
+---
+2014/08/26 11:43:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "loginArray".' in Z:\home\localhost\www\web_test\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\CController.php(270): CController->missingAction('loginArray')
+#1 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): CController->run('loginArray')
+#2 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController('site/loginArray')
+#3 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\web_test\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/web_test/index.php?r=site/loginArray
+HTTP_REFERER=http://localhost/web_test/index.php?r=site/login
+---
+2014/08/26 11:58:59 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in Z:\home\localhost\www\web_test\framework\web\CController.php:336
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 Z:\home\localhost\www\web_test\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 Z:\home\localhost\www\web_test\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): CController->run('Avto')
+#4 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController('site/Avto')
+#5 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 Z:\home\localhost\www\web_test\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/web_test/index.php?r=site/Avto&amp;
+---
+2014/08/26 13:03:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "loginArray".' in Z:\home\localhost\www\web_test\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\CController.php(270): CController->missingAction('loginArray')
+#1 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): CController->run('loginArray')
+#2 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController('site/loginArray')
+#3 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\web_test\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/web_test/index.php?r=site/loginArray
+HTTP_REFERER=http://localhost/web_test/index.php?r=site/login
+---
+2014/08/26 13:06:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "loginArray".' in Z:\home\localhost\www\web_test\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\CController.php(270): CController->missingAction('loginArray')
+#1 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): CController->run('loginArray')
+#2 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController('site/loginArray')
+#3 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\web_test\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/web_test/index.php?r=site/loginArray
+HTTP_REFERER=http://localhost/web_test/index.php?r=site/login
+---
+2014/08/26 13:08:20 [error] [php] Cannot modify header information - headers already sent by (output started at Z:\home\localhost\www\web_test\framework\web\CController.php:793) (Z:\home\localhost\www\web_test\framework\web\CHttpRequest.php:803)
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\CController.php(1043): SiteController->redirect()
+#1 Z:\home\localhost\www\web_test\protected\controllers\SiteController.php(135): SiteController->refresh()
+#2 Z:\home\localhost\www\web_test\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#3 Z:\home\localhost\www\web_test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 Z:\home\localhost\www\web_test\framework\web\CController.php(286): SiteController->runAction()
+#5 Z:\home\localhost\www\web_test\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#6 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): SiteController->run()
+#7 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 Z:\home\localhost\www\web_test\index.php(13): CWebApplication->run()
+REQUEST_URI=/web_test/index.php?r=site/login
+in Z:\home\localhost\www\web_test\protected\controllers\SiteController.php (135)
+in Z:\home\localhost\www\web_test\index.php (13)
+2014/08/26 13:16:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "loginArray".' in Z:\home\localhost\www\web_test\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\web_test\framework\web\CController.php(270): CController->missingAction('loginArray')
+#1 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(282): CController->run('loginArray')
+#2 Z:\home\localhost\www\web_test\framework\web\CWebApplication.php(141): CWebApplication->runController('site/loginArray')
+#3 Z:\home\localhost\www\web_test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\web_test\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/web_test/index.php?r=site/loginArray
+HTTP_REFERER=http://localhost/web_test/index.php?r=site/login
+---

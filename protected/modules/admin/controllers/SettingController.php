@@ -27,8 +27,19 @@ class SettingController extends Controller
                 'roles'=>array('3'),
             ),
 
+            array('allow',  // allow all users to perform 'index' and 'view' actions
+                'actions'=>array('index'),
+                'roles'=>array('2'),
+            ),
+
+            array('deny',  // allow all users to perform 'index' and 'view' actions
+                'actions'=>array('index'),
+                'roles'=>array('1'),
+            ),
+
             array('deny',  // deny all users
-                'users'=>array('*'),
+                'actions'=>array('index'),
+                'users'=>array('?'),
             ),
         );
     }

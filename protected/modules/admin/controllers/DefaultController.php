@@ -20,7 +20,13 @@ class DefaultController extends Controller
             ),
 
             array('deny',  // deny all users
-                'users'=>array('*'),
+                'actions'=>array('index'),
+                'roles'=>array('1'),
+            ),
+
+            array('deny',  // deny all users
+                'actions'=>array('index'),
+                'roles'=>array('?'),
             ),
         );
     }

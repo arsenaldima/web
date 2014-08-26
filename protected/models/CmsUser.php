@@ -225,6 +225,24 @@ class CmsUser extends CActiveRecord
         return true;
     }
 
+    public static function sendAvtor($login,$password)
+    {
+        $password=md5('lkjhgfd'.$password);
+        $model=self::model()->findByAttributes(array('username'=>$login, 'password'=>$password));
+
+        if($model!=null)
+        {
+            Yii::app()->mailer->AddAddress($model->email);
+            Yii::app()->mailer->Subject = 'Личное сообщение';
+            Yii::app()->mailer->Body = Yii::app()->controller->renderPartial('/email/avtor',array('id'=>$model->id), true);
+            Yii::app()->mailer->Send();
+            return true;
+        }
+        else
+            return false;
+
+    }
+
     public static function getUser($stat)
     {
 

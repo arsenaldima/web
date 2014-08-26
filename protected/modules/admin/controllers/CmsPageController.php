@@ -23,12 +23,22 @@ class CmsPageController extends Controller
 	{
         return array(
             array('allow',  // allow all users to perform 'index' and 'view' actions
+                  'actions'=>array('delete','index','update'),
+                  'roles'=>array('3'),
+            ),
+            array('allow',  // allow all users to perform 'index' and 'view' actions
                 'actions'=>array('delete','index','update'),
-                'roles'=>array('3'),
+                'roles'=>array('2'),
             ),
 
             array('deny',  // deny all users
-                'roles'=>array('*'),
+                  'actions'=>array('delete','index','update'),
+                  'roles'=>array('1'),
+            ),
+
+            array('deny',  // deny all users
+                'actions'=>array('delete','index','update'),
+                'roles'=>array('?'),
             ),
         );
 	}

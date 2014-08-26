@@ -12,28 +12,22 @@ class UserIdentity extends CUserIdentity {
     // Данный метод вызывается один раз при аутентификации пользователя.
     public function authenticate(){
 
-
-
         // Производим стандартную аутентификацию, описанную в руководстве.
-
 
         $user = CmsUser::model()->find('LOWER(username)=?', array(strtolower($this->username)));
         if($user->ban==1) die ("Ваш пользователь забанен, для дополнительной инвормации обратитеть к администратору");
-        if(($user===null) || (md5('lkjhgfd'.$this->password)!==$user->password)) {
-            $this->errorCode = self::ERROR_USERNAME_INVALID;
-        } else {
 
-
-
-            // В качестве идентификатора будем использовать id, а не username,
-            // как это определено по умолчанию. Обязательно нужно переопределить
-            // метод getId(см. ниже).
+        if(($user===null) || (md5('lkjhgfd'.$this->password)!==$user->password))
+            if(($user===null) || ($this->password!==$user->password))
+                $this->errorCode = self::ERROR_USERNAME_INVALID;
+              else {
             $this->_id = $user->id;
-
-            // Далее логин нам не понадобится, зато имя может пригодится
-            // в самом приложении. Используется как Yii::app()->user->name.
-            // realName есть в нашей модели. У вас это может быть name, firstName
-            // или что-либо ещё.
+            $this->username = $user->username;
+            CmsUser::model()->updateByPk($this->_id,array('data_avtor'=>time()));
+            $this->errorCode = self::ERROR_NONE;
+        }
+        else {
+            $this->_id = $user->id;
             $this->username = $user->username;
             CmsUser::model()->updateByPk($this->_id,array('data_avtor'=>time()));
             $this->errorCode = self::ERROR_NONE;
