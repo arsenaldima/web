@@ -15,14 +15,15 @@
             $this->widget('bootstrap.widgets.TbMenu', array(
                 'items'=>array(
 
-                    array('label'=>'изменение аватар','url'=>array('/user_personal/avatar')),
-                    array('label'=>'изменение почту','url'=>array('/user_personal/Change_email','id'=>0)),
-                    array('label'=>'изменение пароль','url'=>array('/user_personal/change_pas','id'=>0,'time'=>0)),
-                    array('label'=>'пригласить пользователя','url'=>array('/user_personal/prigl_druga')),
-                    array('label'=>'Создать статью','url'=>array('/user_personal/create')),
-                    array('label'=>'Выйти','url'=>array('/site/logout')),
+                    array('label'=>'изменение аватар','url'=>array('/user_personal/avatar'),'visible'=>!Yii::app()->user->isGuest),
+                    array('label'=>'изменение почту','url'=>array('/user_personal/Change_email','id'=>0),'visible'=>!Yii::app()->user->isGuest),
+                    array('label'=>'изменение пароль','url'=>array('/user_personal/change_pas','id'=>0,'time'=>0),'visible'=>!Yii::app()->user->isGuest),
+                    array('label'=>'пригласить пользователя','url'=>array('/user_personal/prigl_druga'),'visible'=>!Yii::app()->user->isGuest),
+                    array('label'=>'Создать статью','url'=>array('/user_personal/create'),'visible'=>!Yii::app()->user->isGuest),
+                    array('label'=>'Выйти','url'=>array('/site/logout'),'visible'=>!Yii::app()->user->isGuest),
                 ),
                 'htmlOptions'=>array('class'=>'operations'),
+
             ));
             $this->endWidget();
             ?>

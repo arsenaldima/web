@@ -10,6 +10,7 @@ $this->breadcrumbs=array(
 
 ?>
 
+<?php if(!$flag): ?>
 <h1>Авторизация</h1>
 
 
@@ -49,3 +50,13 @@ $this->breadcrumbs=array(
 
     <?php Yii::app()->eauth->renderWidget(); ?>
 </div><!-- form -->
+<?php endif ?>
+
+<?php if($flag):
+    if($flag)
+    echo "<h3>На ваш email отправлено сообщение с ссылкой для подтверждения пользователя</h3>";
+    else
+    echo "<h3>На ваш email не отправлено сообщение с ссылкой для подтверждения пользователя</h3>";
+
+ endif
+?>
